@@ -1,0 +1,63 @@
+/* CSS Tree menu styles */
+.list-companies {
+	padding: 0 0 0 10px /*0 0 0 30px*/
+}
+.list-companies li { 
+	position: relative; 
+	margin-left: -15px;
+	list-style: none;
+}
+.list-companies a {
+}
+.list-companies li.file {
+	margin-left: -1px !important;
+}
+.list-companies li.file a {
+	/*background: url(document.png) 0 0 no-repeat;*/
+	/*padding-left: 21px;*/
+}
+/*.list-companies li.file a[href *= '.pdf']	{ background: url(document.png) 0 0 no-repeat; }
+.list-companies li.file a[href *= '.html']	{ background: url(document.png) 0 0 no-repeat; }
+.list-companies li.file a[href $= '.css']	{ background: url(document.png) 0 0 no-repeat; }
+.list-companies li.file a[href $= '.js']		{ background: url(document.png) 0 0 no-repeat; }*/
+.list-companies li input {
+	position: absolute;
+	left: 0;
+	margin-left: 0;
+	opacity: 0;
+	z-index: -1;
+	cursor: pointer;
+	height: 1em;
+	width: 1em;
+	top: 0;
+}
+.list-companies li input + ol {
+	/*background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='11px' height='11px' viewBox='0 0 42 42' style='enable-background:new 0 0 455 455;' xml:space='preserve'/><polygon points='42,19 23,19 23,0 19,0 19,19 0,19 0,23 19,23 19,42 23,42 23,23 42,23'/></svg>") 40px 0 no-repeat;*/
+	background: url(../img/toggle-small-expand.png) 40px 0 no-repeat;
+	margin: -1.3em 0 0 -44px;
+    height: 1.2em;
+}
+.list-companies li input + ol > li { display: none; margin-left: -14px !important; padding-left: 1px; }
+.list-companies li input + .tree-node {
+	margin-left: -14px !important;
+	padding-left: 3px;
+	background-color: #333;
+}
+.list-companies li label {
+	/*background: url(folder-horizontal.png) 15px 1px no-repeat;*/
+	cursor: pointer;
+	display: block;
+	padding-left: 15px;/*37px;*/
+}
+.list-companies li input:checked + ol {
+	background: url(../img/toggle-small.png) 40px 5px no-repeat;
+	margin: -1.5em 0 0 -44px;
+	padding: 1.3em 0 0 80px;
+	height: auto;
+	padding-inline-start: 75px;
+}
+.list-companies li input:checked + ol > li { display: block; margin: 0 0 0.125em;  /* 2px */}
+.list-companies li input:checked + .tree-node {
+	background-color: #fff;
+}
+.list-companies li input:checked + ol > li:last-child { margin: 0 0 0.063em; /* 1px */ }
