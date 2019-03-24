@@ -246,7 +246,7 @@ h1.section-header-txt .hidden-link:visited {
     width: 80vw 
 }
 #section_4.section {
-    height: 90vh
+    height: 75vh
 }
 #section_4.section .section-content-bg {
     width: 60vw;
@@ -256,12 +256,12 @@ h1.section-header-txt .hidden-link:visited {
     background-size: 100% auto !important;
 }
 #section_4 .section-content-bg > div {
-    margin: 50px auto;
-    max-width: 41.67%;
+    margin: 110px auto;
+    max-width: 50%;
 }
 #section_4 img {
-    margin: 15px 0 20px;
-    max-width: 80px
+    margin: 5px 0 10px;
+    max-width: 80px;
 }
 #section_4 p {
     margin-bottom: 5px
