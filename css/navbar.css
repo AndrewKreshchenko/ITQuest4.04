@@ -21,6 +21,7 @@
     position: fixed;
     top: 10px;
     right: 20px;
+    width: fit-content;
     z-index: 3;
 }
 .navbar a {
@@ -166,8 +167,8 @@
     }
     #btn-menu-collapse {
         margin: 1.6rem 1.6rem 1.6rem 0 !important;
-        width: 50px;
-        height: 50px;
+        width: 35px;
+        height: 35px
     }
     #btn-menu-collapse a {
         padding: 15px 5px 0 0 !important;
