@@ -34,10 +34,12 @@ var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
 var ind_ = 1;//erase later
 autoCollapseMenu();
 function autoCollapseMenu() {
-    setTimeout(function () {
-        $('.navbar').removeClass('opened') 
-    }, 
-    5000);
+    if ($(window).outerWidth() < 550) {
+        setTimeout(function () {
+            $('.navbar').removeClass('opened') 
+        }, 
+        5000);
+    }
 }
 function to_section(i) {
     $('.navbar .nav-item.active').removeClass('active');
@@ -154,9 +156,7 @@ $('#btn-menu-collapse').on('click', function() {
 $('#btn-menu-open').on('click', function() {
     var $li = $('.navbar .btn-3');
     $('.navbar').addClass('opened');
-    if ($(window).outerWidth() < 550) {
-        autoCollapseMenu();
-    }
+    autoCollapseMenu();
     /*$li.each(function(i, el) {
         console.log(el);
        $(el).animate({'transform': 'translateX(-5px)', 'transform': 'rotate(2deg)'}, 1000); 
