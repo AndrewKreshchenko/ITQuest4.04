@@ -200,8 +200,11 @@ h1.section-header-txt .hidden-link:visited {
     font-weight: 400;
     cursor: auto
 }
+.d-none { /* Bootstrap 4 style */
+    display: none
+}
 
-/* Custom styles
+/* Styles for special categories
 ---------------------------------------- */
 /* Styles for particular sections */
 #section_2.section .section-content-bg {/*#section_2*/
@@ -215,7 +218,7 @@ h1.section-header-txt .hidden-link:visited {
     background: linear-gradient(to bottom right, #4a1c1c, rgba(0,0,0,0.3));
 }
 #section_3.section .section-content-bg {/*#section_2*/
-    top: -10vh;
+    top: -15vh;
     left: -25%;
     width: 250vh;
     height: 130vh;
@@ -223,11 +226,16 @@ h1.section-header-txt .hidden-link:visited {
 }
 #section_3.section .section-content-big {
     position: absolute;
-    margin-top: -10vh
+    margin-top: -10vh;
+    width: 100%;
 }
 #section_3.section .section-content-bg > div {
     margin: 50px auto 0;
     width: 90vw;
+}
+#section_3.section  .section-content-big > div { /* Override native Bootstrap's .row (in situation) */
+    margin-left: 160px;
+    margin-right: 160px;
 }
 @media screen and (max-width: 1024px) {
     #section_2.section .section-content-bg {
@@ -240,10 +248,14 @@ h1.section-header-txt .hidden-link:visited {
     height: 80vh
 }
 #section_3.section .section-content {
-    transform: rotate(-1deg)
+    transform-origin: 50% 50%;
+    transform: rotate(-0.1deg)
 }
 #section_3.section .section-content {
     width: 80vw 
+}
+#section_3 .section-header-txt {
+    margin-bottom: 20px
 }
 #section_4.section {
     height: 75vh
@@ -349,6 +361,21 @@ h1.section-header-txt .hidden-link:visited {
 }
 
 /* Gallery */
+/* Companies - tree hierarchy */
+.list-companies {
+    margin-top: 50px;
+    transform: rotate(-3deg)
+}
+.list-companies label, .list-companies ul li, .list-companies ul li a {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+}
+.list-companies > li > label {
+    font-size: 22px
+}
+#gallery {
+    float: right
+}
 .gallery-container {
     /*width: 25000px;*/
     /*max-height: 90vh;
@@ -448,19 +475,6 @@ h1.section-header-txt .hidden-link:visited {
 }
 .baguetteBox-button {
     background-color: transparent !important;
-}
-
-/* Companies - tree hierarchy */
-.list-companies {
-    margin-top: 15px;
-    transform: rotate(-3deg)
-}
-.list-companies label, .list-companies ul li, .list-companies ul li a {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 300;
-}
-.list-companies > li > label {
-    font-size: 22px
 }
 
 /*.spec_items {
