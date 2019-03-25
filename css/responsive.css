@@ -15,6 +15,10 @@
         margin: 30px auto 0;
         width: 100vw
     }
+    #section_3.section  .section-content-big > div { /* Override native Bootstrap's .row (in situation) */
+        margin-left: 50px;
+        margin-right: 50px;
+    }
     /*.section .section-content {
         width: 75vw; 
     }*/
@@ -92,13 +96,19 @@
     #section_3.section .section-content-big {
         margin-top: -30vh
     }
+    #section_3.section  .section-content-big > div { /* Return to native Bootstrap's .row (in situation) */
+        margin-left: -15px;
+        margin-right: -15px;
+    }
     .list-companies {
         margin: 50px auto;
-        width: 66.67%;
         transform: rotate(0)
     }
+    #gallery {
+        height: 200px;
+    }
     .tz-gallery .thumbnail .fit-content, .tz-gallery .thumbnail img {
-        max-height: 130px
+        max-height: 150px
     }
     .d-sm-none { /* Bootstrap 4 style */
         display: none
@@ -127,9 +137,9 @@
     .list-companies {
         margin: 20px auto
     }
-    .tz-gallery .thumbnail .fit-content, .tz-gallery .thumbnail img {
+    /*.tz-gallery .thumbnail .fit-content, .tz-gallery .thumbnail img {
         max-height: 80px
-    }
+    }*/ /* last old styles */
     #section_4.section {
         height: 45vh
     }
