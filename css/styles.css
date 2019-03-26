@@ -218,7 +218,7 @@ h1.section-header-txt .hidden-link:visited {
     background: linear-gradient(to bottom right, #4a1c1c, rgba(0,0,0,0.3));
 }
 #section_3.section .section-content-bg {/*#section_2*/
-    top: -15vh;
+    top: -23vh;
     left: -25%;
     width: 250vh;
     height: 130vh;
@@ -226,7 +226,7 @@ h1.section-header-txt .hidden-link:visited {
 }
 #section_3.section .section-content-big {
     position: absolute;
-    margin-top: -10vh;
+    margin-top: -20vh;
     width: 100%;
 }
 #section_3.section .section-content-bg > div {
@@ -234,8 +234,8 @@ h1.section-header-txt .hidden-link:visited {
     width: 90vw;
 }
 #section_3.section  .section-content-big > div { /* Override native Bootstrap's .row (in situation) */
-    margin-left: 160px;
-    margin-right: 160px;
+    margin-left: 180px;
+    margin-right: 180px;
 }
 @media screen and (max-width: 1024px) {
     #section_2.section .section-content-bg {
@@ -302,8 +302,22 @@ h1.section-header-txt .hidden-link:visited {
     width: 100px;
     height: 100px;
 }
+#letter-q-circle.anim {
+    -moz-animation: rotation 10s infinite;
+    -ms-animation: rotation 10s infinite;
+    -o-animation: rotation 10s infinite;
+    -webkit-animation: rotation 10s infinite;
+    animation: rotation 10s infinite;
+    -ms-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+}
+#letter-q-circle1.anim {
+    -webkit-animation: rotation1 10s infinite;
+    animation: rotation1 10s infinite;
+    -webkit-transform-origin: 50% 50%;
+}
 #letter-q-line {
-    width: 20px;
+    width: 17px;
     height: auto;
     -ms-transform-origin: 50% 50%;
     -webkit-transform-origin: 50% 50%;
@@ -319,6 +333,13 @@ h1.section-header-txt .hidden-link:visited {
     -webkit-animation: sparks 1s;
     animation: sparks 1s;
     /*animation-timing-function: cubic-bezier(.65,0,.32,1.55);*/
+}
+#robotdebris.anim {
+    -moz-animation: dmove 1s;
+    -ms-animation: dmove 1s;
+    -o-animation: dmove 1s;
+    -webkit-animation: dmove 1s;
+    animation: dmove 1s;
 }
 /*.letter-q.anim img {
     -moz-animation: q_appear 4s;
@@ -336,15 +357,6 @@ h1.section-header-txt .hidden-link:visited {
     -ms-transform-origin: 50% 50%;
     -webkit-transform-origin: 50% 50%;
 }*/
-.block-intro-title #letter-q-circle {
-    -moz-animation: rotation 10s infinite;
-    -ms-animation: rotation 10s infinite;
-    -o-animation: rotation 10s infinite;
-    -webkit-animation: rotation 10s infinite;
-    animation: rotation 10s infinite;
-    -ms-transform-origin: 50% 50%;
-    -webkit-transform-origin: 50% 50%;
-}
 @keyframes sparks {
     0%, 25% {opacity: 0}
     25% {opacity: .5}
@@ -355,6 +367,17 @@ h1.section-header-txt .hidden-link:visited {
 @keyframes rotation {
     from {transform: rotate(0deg)}
     to {transform: rotate(360deg)}
+}
+@keyframes rotation1 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(-360deg)}
+}
+@keyframes dmove {
+    from {transform: translate(0,0)}
+    to {transform: translate(100px,300px)}
+}
+.header-title-txt {
+    margin-top: 30px
 }
 .header-title-txt img {
     max-height: 80px
@@ -411,12 +434,11 @@ h1.section-header-txt .hidden-link:visited {
     margin-left: 0 !important;
     margin-right: 0 !important
 }
-.tz-gallery .thumbnail .fit-content {
+/*.tz-gallery .thumbnail .fit-content {
     margin-right: auto;
     margin-left: 0;
-    max-height: 20vh;
-    /*height: fit-content;*/
-}
+    max-height: 20vh
+}*/
 .g-root {
     padding-inline-start: 20px
 }
