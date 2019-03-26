@@ -24,14 +24,14 @@
     }*/
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .tz-gallery .thumbnail .fit-content {
+    /*.tz-gallery .thumbnail .fit-content {
         max-height: -webkit-fill-available
     }
     .tz-gallery .thumbnail .fit-content {
         margin: 0 auto;
         max-height: 15vh;
         height: fit-content
-    }
+    }*/
 }
 @media screen and (max-width: 1024px) {
     p, pre, button, li, label, code {
@@ -84,6 +84,27 @@
     }
     .section .section-content-bg > div {
         margin-left: 20px
+    }
+    .section.section-intro .block-actor-decor img {
+        margin-top: 10vh
+    }
+    .block-intro-title > div {
+        top: -18px;
+        left: -50px;
+        width: 70%;
+    }
+    .block-intro-title > img {
+        max-height: 75px;
+    }
+    #letter-q-circle {
+        width: 75px
+    }
+    .header-title-txt img {
+        max-height: 69px;
+    }
+    .block-intro-title > div {
+        top: -10px;
+        left: -65px
     }
     #section_2.section .section-content-bg {
         right: 20vw
@@ -154,6 +175,9 @@
 @media screen and (max-width: 400px) {
     .container-space {
         width: 250vw
+    }
+    .header-title-txt {
+        margin-top: 15px
     }
     #section_2.section .section-content-bg {
         width: 120vw;
