@@ -73,7 +73,7 @@ function headerActions() {
     var $c = $('#letter-q-circle'), $l = $('#letter-q-line');
     if ($c.length && $l.length) {
         let o_c = $c.offset(), size = $c.outerWidth(); // $q.css('width', size_svg/2.5+'px');
-        let o_l = {'top': (o_c.top+size/2.5), 'left': (o_c.left+size/2.5)};
+        let o_l = {'top': (o_c.top+size/2), 'left': (o_c.left+size/2.4)};
         $l.offset(o_l);
         $l.css('opacity', 1);
     }
