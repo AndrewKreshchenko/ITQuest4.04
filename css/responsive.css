@@ -88,7 +88,7 @@
     .section.section-intro .block-actor-decor img {
         margin-top: 10vh
     }
-    .block-intro-title > div {
+    .block-intro-title .letter-q {
         top: -18px;
         left: -50px;
         width: 70%;
@@ -99,10 +99,17 @@
     #letter-q-circle {
         width: 75px
     }
+    .letter-q1 {
+        top: 50px;
+        left: -18px;
+    }
+    #letter-q-circle1 {
+        width: 40px
+    }
     .header-title-txt img {
         max-height: 69px;
     }
-    .block-intro-title > div {
+    .block-intro-title .letter-q {
         top: -10px;
         left: -65px
     }
@@ -134,6 +141,32 @@
     .d-sm-none { /* Bootstrap 4 style */
         display: none
     }
+    .lightbox img {
+        transition: all .25s;
+        -webkit-transition: all .25s; 
+        opacity: .5
+    }
+    .roll {
+        top: 0;
+        position: absolute;
+        width: 90% !important;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    .lightbox img:active, .lightbox img:after {
+        transition: all .5s;
+        -webkit-transition: all .5s; 
+        opacity: 1
+    }
+    /* add the font awesome icon */
+    .roll::before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: url(../img/zoom-in.png)
+    }
     #section_4.section .section-content-bg {
         margin-left: -44vw;
         width: 120vw
@@ -146,6 +179,29 @@
     p, pre, button, li, label, code {
         font-size: 16px
     }
+    .section.section-intro .block-actor-decor img {
+        max-height: 60vh
+    }
+    #header-right {
+        margin-left: -15vw
+    }
+    .block-intro-title .letter-q {
+        top: 0px;
+        left: -50px;
+    }
+    #letter-q-circle {
+        width: 60px;
+    }
+    #letter-q-line {
+        width: 12px
+    }
+    .letter-q1 {
+        top: 45px;
+        left: -12px;
+    }
+    .header-title-txt img {
+        max-height: 65px;
+    }
     .invitation, .gallery-container, #info .g_block {
         margin-left: 120vw;
     }
@@ -155,8 +211,20 @@
     #section_3.section .section-content-big {
         margin-top: -20vh
     }
+    #section_3.section .section-content-big {
+        left: 0
+    }
+    #section_3.section .section-header-txt {
+        margin-top: 0
+    }
     .list-companies {
         margin: 20px auto
+    }
+    #gallery {
+        height: 30vh
+    }
+    .list-companies {
+        padding: 0 0 0 40px
     }
     /*.tz-gallery .thumbnail .fit-content, .tz-gallery .thumbnail img {
         max-height: 80px
@@ -172,7 +240,24 @@
         margin: 20px auto
     }
 }
+@media screen and (max-width: 550px) and (max-height: 600px) {
+    #section_3 .section-title {
+        font-size: inherit
+    }
+    .list-companies > li > label {
+        font-size: inherit
+    }
+    .tz-gallery .thumbnail img {
+        max-height: 20vh
+    }
+    #section_4 .section-content-bg > div {
+        max-width: 80%;
+    }
+}
 @media screen and (max-width: 400px) {
+    .section-intro > div {
+        padding-top: 140px
+    }
     .container-space {
         width: 250vw
     }
@@ -180,34 +265,34 @@
         margin-top: 15px
     }
     #section_2.section .section-content-bg {
-        width: 120vw;
-        height: 120vw
+        right: 60vw;
+        width: 110vw;
+        height: 110vw
     }
     .invitation {
         width: 110vw
     }
-    #section_2.section .section-content-bg {
-        right: 30vw
+    #section_3.section .section-header-txt {
+        margin-top: -10px
+    }
+    #gallery {
+        height: 26vh
+    }
+    .tz-gallery .thumbnail img {
+        max-height: 18vh
     }
 }
-/*.invitation {
-    width: 70vw;
-    background-color: #fff;
-    text-align: center
+@media screen and (max-width: 400px) and (max-height: 600px) {
+    .section-intro > div {
+        padding-top: 90px
+    }
+    .header-title-txt img {
+        max-height: 55px;
+    }
+    .section-header-txt {
+        font-size: 22px;
+    }
+    #section_2.section .section-content-bg {
+        right: 43vw
+    }
 }
-.gallery-container {
-    margin-left: 100vw;
-    width: 20000px;
-}
-.gallery-container p.description {
-    text-align: center;
-    margin: 30px auto;
-    font-size: 18px;
-    color: #85878c;
-}
-.tz-gallery .thumbnail, .g_block {
-    margin-bottom: 30px;
-    background-color: #fff;
-    border: none;
-    box-shadow: 0 8px 9px rgba(0, 0, 0, 0.5);
-}*/
