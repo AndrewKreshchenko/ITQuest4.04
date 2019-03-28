@@ -37,7 +37,7 @@
     z-index: -2;
 }
 .parallax__layer--deep {
-    background: url(../img/bg_space.png) no-repeat;
+    background: url(../img/wallpaper-wiki.jpg) no-repeat;/*bg_space*/
     /*height: 100%;
     width: 100%;
     -webkit-filter: blur(5px);
