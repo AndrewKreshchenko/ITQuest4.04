@@ -222,7 +222,7 @@ h1.section-header-txt .hidden-link:visited {
     left: -25%;
     width: 250vh;
     height: 130vh;
-    background: linear-gradient(to bottom right, #002e33, rgba(0,0,0,0.1));
+    background: linear-gradient(to bottom right, #002e33, rgba(0,0,0,.5));
 }
 #section_3.section .section-content-big {
     position: absolute;
@@ -254,14 +254,15 @@ h1.section-header-txt .hidden-link:visited {
 #section_3.section .section-content {
     width: 80vw 
 }
-#section_3 .section-header-txt {
+/*#section_3 .section-header-txt {
     margin-bottom: 20px
-}
+}*/
 #section_4.section {
     height: 75vh
 }
 #section_4.section .section-content-bg {
     width: 60vw;
+    display: flex;
     height: -webkit-fill-available;
     border-radius: 0;
     background-position: top !important;
@@ -287,7 +288,7 @@ h1.section-header-txt .hidden-link:visited {
 .block-intro-title > img {
     max-height: 100px
 }
-.block-intro-title > div {
+.block-intro-title .letter-q {
     position: absolute;
     top: 0;
     left: -90px;
@@ -298,9 +299,16 @@ h1.section-header-txt .hidden-link:visited {
     max-width: 50px;
     opacity: 0;
 }
+.letter-q1 {
+    position: absolute;
+    top: 78px;
+    left: -30px
+}
 #letter-q-circle {
-    width: 100px;
-    height: 100px;
+    width: 100px
+}
+#letter-q-circle1 {
+    width: 55px
 }
 #letter-q-circle.anim {
     -moz-animation: rotation 10s infinite;
