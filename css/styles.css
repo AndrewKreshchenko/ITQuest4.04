@@ -215,7 +215,7 @@ h1.section-header-txt .hidden-link:visited {
     background: -o-linear-gradient(bottom right, #fff, rgba(255,255,255,.3));
     background: -moz-linear-gradient(bottom right, #fff, rgba(255,255,255,.3));
     background: linear-gradient(to bottom right, #fff, rgba(255,255,255,.3));*/
-    background: linear-gradient(to bottom right, #4a1c1c, rgba(0,0,0,0.3));
+    background: linear-gradient(to bottom right, #5c2323, rgba(0,0,0,0.7));
 }
 #section_3.section .section-content-bg {/*#section_2*/
     top: -23vh;
@@ -269,12 +269,12 @@ h1.section-header-txt .hidden-link:visited {
     background-size: 100% auto !important;
 }
 #section_4 .section-content-bg > div {
-    margin: 110px auto;
+    margin: 90px auto;
     max-width: 50%;
 }
 #section_4 img {
-    margin: 5px 0 10px;
-    max-width: 80px;
+    margin: 15px 0 20px;
+    max-width: 100px;
 }
 #section_4 p {
     margin-bottom: 5px
@@ -506,42 +506,3 @@ h1.section-header-txt .hidden-link:visited {
 .baguetteBox-button {
     background-color: transparent !important;
 }
-
-/*.spec_items {
-    padding: 5px;
-    background: #fff;
-    background: -webkit-linear-gradient(top, #fff rgba(255,255,255,.7));
-    background: -o-linear-gradient(bottom, #fff, rgba(255,255,255,.7));
-    background: -moz-linear-gradient(bottom, #fff, rgba(255,255,255,.7));
-    background: linear-gradient(to bottom, #fff, rgba(255,255,255,.7));
-}*/
-
-/*#carousel {
-    overflow: visible !important;
-    visibility: visible !important;
-}
-#carousel .cloud9-item, #buttons button {
-    cursor: pointer;
-}
-#carousel .cloud9-item {
-    width: 33vw !important;
-    height: auto
-}*/
-
-/*footer {
-    bottom: 0;
-    padding: 5px;
-    text-align: center;
-}
-.tz-gallery .caption h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 0;
-}*/
-/*.tz-gl-first {
-    background: #fff;
-    background: -webkit-linear-gradient(top left, rgba(255,255,255,.7), rgba(0,0,0,0));
-    background: -o-linear-gradient(bottom right, #fff, rgba(0,0,0,0));
-    background: -moz-linear-gradient(bottom right, #fff, rgba(0,0,0,0));
-    background: linear-gradient(to bottom right, rgba(255,255,255,.7), rgba(0,0,0,0));
-}*/
