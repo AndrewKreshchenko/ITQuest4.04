@@ -52,22 +52,34 @@ function to_section(i) {
         let offset = $el.offset();
         if (i == 4 && ind_ == 3) {
             let wh = $(window).height();
-            $('#main').scrollTo({top:'+='+(wh-100)+'px', left:0}, 1200).removeClass('current');
+            $('#main').scrollTo({top:'+='+(wh-100)+'px', left:0}, 1200);
         }
         else if (i == 3 && ind_ == 4) {
             let wh = $(window).height();
-            $('#main').scrollTo({top:'-='+(wh-100)+'px', left:0}, 1200).removeClass('current');
+            $('#main').scrollTo({top:'-='+(wh-100)+'px', left:0}, 1200);
         }
         else if (i == 2) {
             let ww = $(window).outerWidth();
-            $('#main').scrollTo({top:offset.top+'px', left:(offset.left)+'px'}, 1200).removeClass('current');
+            $('#main').scrollTo({top:offset.top+'px', left:offset.left+'px'}, 1200);
         }
         else {
-            $('#main').scrollTo({top:offset.top+'px', left:offset.left+'px'}, 1200).removeClass('current');
+            $('#main').scrollTo({top:offset.top+'px', left:offset.left+'px'}, 1200);
         }
     }
     ind_ = i;
 }
+
+$('#next_section').on('click',  function() {
+    var $curr = $('.navbar .nav-item.active').index();
+    to_section(parseInt($curr)+1);
+});
+$('#prev_section').on('click',  function() {
+    var $curr = $('.navbar .nav-item.active').index();
+    to_section(parseInt($curr)-1);
+});
+$('[data-nav]').on('click', function() {
+    to_section($(this).data('nav'));
+})
 
 function headerActions() {
     var $c = $('#letter-q-circle'), $l = $('#letter-q-line');
