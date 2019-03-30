@@ -6,15 +6,33 @@
     width: 25px;
     height: 25px;
     border-radius: 50% !important;
+    background: none;
+    transform: rotate(15deg);
     text-align: center
 }
 #btn-menu-collapse a {
     padding: 0 !important;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 28px !important;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 1.2;
+    line-height: 1.2
+}
+#btn-menu-collapse img {
+    max-width: 20px
+}
+
+.navbar-bottom > img {
+    position: fixed;
+    bottom: 10px;
+    width: 60px;
+    z-index: 3;
+    transform-origin: 50% 50%
+}
+#next_section {
+    right: 20px
+}
+#prev_section {
+    left: 20px
+}
+.navbar-bottom img {
+    width: 60px
 }
 
 .navbar {
@@ -164,7 +182,7 @@
         font-size: 17px
     }
     .navbar ul li {
-        padding: 10px
+        /*padding: 10px*/
     }
     #btn-menu-collapse {
         margin: 1.6rem 1.6rem 1.6rem 0 !important;
@@ -196,7 +214,7 @@
         transform: translateX(15px) rotate(-14deg);
     }
     #btn-menu-collapse {
-        margin: 0 3.2rem 1.6rem !important;
+        margin: 0 4.2rem 1.6rem !important;
         -webkit-transform: rotate(-25deg);
         -moz-transform: rotate(-25deg);
         -o-transform: rotate(-25deg);
@@ -205,7 +223,7 @@
     }
     #btn-menu-collapse a {
         padding: 15px 5px 0 0 !important;
-        line-height: 1.8;
+        line-height: 1.6
     }
     .section.section-intro .block-actor-decor img {
         max-height: 60vh;
@@ -217,5 +235,14 @@
     }
     .navbar ul li {
         padding: 3px
+    }
+    #next_section {
+        right: 10px
+    }
+    #prev_section {
+        left: 10px
+    }
+    .navbar-bottom img {
+        width: 50px
     }
 }
