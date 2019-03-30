@@ -4,6 +4,12 @@
     .section .section-content {
         font-size: 18px
     }
+    .block-intro-text {
+        margin-top: 5vh
+    }
+    .section.section-intro .block-actor-decor img {
+        max-height: 75vh
+    }
     #section_3.section .section-content-bg > div {
         left: -50%;
         margin: 30px auto 0;
@@ -33,6 +39,10 @@
     }
     .section-header-txt {
         font-size: 28px
+    }
+    .section.section-intro .block-actor-decor img {
+        padding-left: 10vw;
+        max-height: 65vh
     }
     #section_3.section .section-content-bg {
         left: -50%
@@ -72,7 +82,10 @@
         width: 90vw; 
     }*/
     .invitation {
-        margin-right: 0;
+        margin-right: 0
+    }
+    .section.section-intro .block-actor-decor img {
+        padding-left: 0
     }
     .header_gallery {
         max-width: 95%
@@ -163,7 +176,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        content: url(../img/zoom-in.png)
+        /*content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 50 50" version="1.1" width="50px" height="50px"><g><path fill="rgba(255,255,255,.75)" d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z "/></g></svg>');*/
+        content: url(../img/modal.svg);
     }
     #section_4.section .section-content-bg {
         margin-left: -44vw;
@@ -178,13 +192,13 @@
         font-size: 16px
     }
     .section.section-intro .block-actor-decor img {
-        max-height: 60vh
+        max-height: 55vh
     }
     #header-right {
         margin-left: -15vw
     }
     .block-intro-title .letter-q {
-        top: 0px;
+        top: 0;
         left: -50px;
     }
     #letter-q-circle {
@@ -195,7 +209,7 @@
     }
     .letter-q1 {
         top: 45px;
-        left: -12px;
+        left: -15px
     }
     .header-title-txt img {
         max-height: 65px;
@@ -235,7 +249,7 @@
         margin-left: -44vw
     }
     #section_4 .section-content-bg > div {
-        margin: 20px auto
+        margin: 80px auto
     }
     #section_4 img {
         margin: 5px 0 10px;
@@ -266,6 +280,25 @@
     .header-title-txt {
         margin-top: 15px
     }
+    #letter-q-circle {
+        width: 55px
+    }
+    .block-intro-title .letter-q {
+        top: 5px
+    }
+    .letter-q1 {
+        top: 48px;
+        left: -17px;
+    }
+    #letter-q-circle1 {
+        width: 30px
+    }
+    #letter-q-line {
+        width: 10px
+    }
+    .block-intro-title > img {
+        max-height: 60px
+    }
     #section_2.section .section-content-bg {
         right: 60vw;
         width: 110vw;
@@ -274,7 +307,7 @@
     .invitation {
         width: 110vw
     }
-    #section_3.section .section-header-txt {
+    #section_3.section .section-header-txt, .block-intro-text {
         margin-top: -10px
     }
     #gallery {
@@ -296,5 +329,8 @@
     }
     #section_2.section .section-content-bg {
         right: 43vw
+    }
+    #section_4 .section-content-bg > div {
+        margin: 25px auto
     }
 }
