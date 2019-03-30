@@ -1,545 +1,548 @@
-/* General styles
----------------------------------------- */
-/*@font-face {
-    font-family: 'Menlo Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Menlo Regular'), url('Menlo-Regular.woff') format('woff');
-}*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&subset=cyrillic');
-/*@import url('https://fonts.googleapis.com/css?family=PT+Mono|Roboto+Mono:400,500,700&subset=cyrillic,cyrillic-ext');*/
-@import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,600,700,800,900&subset=cyrillic');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|PT+Sans:400,700|Roboto+Condensed:300,400,700&subset=cyrillic,cyrillic-ext');
-@font-face {
-    font-family: 'Myriad Pro Light';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Myriad_Pro_Light'), url('fonts/Myriad_Pro_Light.otf') format('otf');
-}
-@font-face {
-    font-family: 'Myriad Pro Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Myriad Pro Regular'), url('fonts/Myriad_Pro_Regular.ttf') format('ttf');
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lviv IT Quest 4.04 (2019)</title>
+    <link rel="icon" type="image/png" href="img/fav.ico" sizes="32x32"><!--<link rel="icon" type="image/png" href="img/fic.png" sizes="32x32">-->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css"><!--Used Bootstrap 3 Gallery-->
+    <link rel="stylesheet" media="all" href="css/space.css"/>
+    <link rel="stylesheet" media="all" href="css/styles.css"/>
+    <link rel="stylesheet" media="all" href="css/navbar.css">
+    <link rel="stylesheet" media="all" href="css/responsive.css"/>
+    <link rel="stylesheet" href="css/styles_tree.css"/>
+    <!--<link rel="stylesheet" href="dist/treeview/treeview.css"/>-->
+</head>
+<body>
+	<!--<ul class="nav">
+	    <li class="loud"><a href="#">Home</a></li>
+		<li class="loud"><a href="#">About</a></li>
+		<li class="loud"><a href="#">Case studies</a></li>
+		<li class="loud"><a href="#">Clients</a></li>
+		<li class="loud"><a href="#">Contact</a></li>
+	</ul>-->
+    <div class="navbar opened">
+        <ul>
+            <li id="btn-menu-open" class="btn-3"><a title="Розгорнути меню" href="#">Меню</a></li>
+            <li class="btn-3 nav-item active"><a title="Перейти до початку" href="#" data-nav="1">IT Quest 2019</a></li>
+            <li class="btn-3 nav-item"><a title="Перейти до вітання" href="#" data-nav="2">Вітаємо 2</a></li>
+            <li class="btn-3 nav-item"><a title="Перейти до галереї" href="#" data-nav="3">Галерея</a></li>
+            <li class="btn-3 nav-item"><a title="Перейти до деталей" href="#" data-nav="4">Деталі</a></li>
+            <li id="btn-menu-collapse"><a title="Приховати меню" href="#"><img src="img/nav_collapse.png" alt="navCollapse"></a></li>
+        </ul>
+    </div>
+    <div class="navbar-bottom">
+        <img id="next_section" src="img/next.png" alt="arrowNavNext">
+        <img id="prev_section" src="img/prev.png" alt="arrowNavPrev">
+    </div>
 
-body {
-    /*background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); min-height: 30vh;*/
-    /*background-color: #201234;*/
-    font: normal 16px sans-serif;
-}
-::-moz-selection {background: #552020}
-::selection {background: #552020}
-.horizon.scroll img {
-    margin: -1.25em 0 0 -44px;
-    height: 1.5em
-}
-p, a, button, li, label, code, pre, h1, h2, h3 {
-    font-family: 'Roboto Condensed', sans-serif;
-    color: rgba(255,255,255, .75)
-}
-p, a, pre {
-    /*font-family: 'PT Sans', sans-serif;*/
-    /* font-family: 'Open Sans Condensed', sans-serif; */
-    /* font-family: 'Droid Sans', sans-serif; */
-    outline: none;
-    border: none;
-}
-p, pre, button, li, label, code {
-    font-size: 16px;
-} 
-a {
-    font-weight: 300;
-    text-decoration: none;
-    color: #80f2ff; /*#00707c*//*#d7066c;*/
-    -webkit-transition: color 0.5s;
-    -moz-transition: color 0.5s;
-    -o-transition: color 0.5s;
-    transition: color 0.5s;
-    -webkit-user-drag: none
-}
-a:hover, a:focus, a:active, a:after {
-    color: #fff !important;
-    text-decoration: none
-}
-a:visited {
-    color: #00b8cc
-}
-.test1 {color: #b95050}
-.test2 {color: #552020}
-.test3 {color: #e70706}
-.test3 {color: #c60f0f}
-.test5 {color: #00707c}
+    <div id="main" class="parallax">
+        <div class="parallax__group">
+            <div class="parallax__layer parallax__layer--base container-space">
+                <div id="section_1" class="section section-intro inline-section">
+                    <div class="row">
+                        <div class="col-xs-6 block-actor-decor text-center">
+                            <img src="img/robot_itq_.png">
+                        </div>
+                        <div class="col-xs-6 block-intro-text">
+                        </div>
+                    </div>
+                </div>
+                <div id="section_2" class="section section-container inline-section">
+                    <div class="section-content row"><!--style="background: url(img/bg_section.png);"-->
+                        <div class="section-content-bg">
+                            <!--<img class="section-bg-cover" src="img/bg_moon.png">-->
+                            <div id="inv" class="invitation">
+                                <h1 class="section-header-txt">
+                                    <span>Вітаємо у нашій команді</span> <span>на IT Quest <a href="https://eleks.com/404" class="hidden-link">4.04</a>!</span>
+                                </h1>
+                                <div class="text-center">
+                                    <p class="text-center">IT QUEST has come! Сьогодні довгоочікувана подія, яка дасть змогу тобі відчути себе в реальному IT-середовищі та відкрити нові горизонти. Тож поквапся, твій час спробувати себе настав!</p>
+                                    <!--<p><a href="index.html">Для десктопів</a>.</p>
+                                    <p><a href="indexmob2.html">Для мобільних версій ></a>.</p>-->
+                                    <img src="img/emoticon_smile.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="section_3" class="section section-container inline-section">
+                    <!--<div>
+                        <div id="carousel">
+                            <img class="cloud9-item" src="img/Perfectial/1_Perfectial1_b.jpg" alt="Item #1">
+                            <img class="cloud9-item" src="img/Perfectial/2_Perfectial2.jpg" alt="Item #2">
+                            <img class="cloud9-item" src="img/Perfectial/3_Perfectial3.jpg" alt="Item #3">
+                            <img class="cloud9-item" src="img/Perfectial/4_Perfectial4.jpg" alt="Item #4">
+                        </div>
+                        <div id="buttons">
+                            <button class="left">←</button>
+                            <button class="right">→</button>
+                        </div>
+                    </div>-->
+                    <div class="section-content">
+                        <div class="section-content-bg">
+                        </div>
+                        <div class="section-content-big">
+                            <h1 class="section-header-txt"><span>Світлини</span> <span>з минулих років<span></h1>
+                            <div class="row">
+                                <div id="gallery" class="col-xs-12 col-sm-6 col-md-8 ready">
+                                    <div class="tz-gallery current" data-group="All">
+                                        <h3 class="section-title">Усі фото</h3>
+                                        <div class="row clearfix">
+                                            <div class="col-xs-12 col-sm-6">
+                                                <span class="roll"></span>
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Skillotron" href="img/Skillotron/Skillotron_1.jpg">
+                                                        <img src="img/Skillotron/Skillotron_1.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4 col-sm-6 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Skillotron" href="img/Skillotron/Skillotron_2.jpg">
+                                                        <img src="img/Skillotron/Skillotron_2.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Skillotron" href="img/Skillotron/Skillotron_3.jpg">
+                                                        <img src="img/Skillotron/Skillotron_3.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Skillotron" href="img/Skillotron/Skillotron_4.jpg">
+                                                        <img src="img/Skillotron/Skillotron_4.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Skillotron" href="img/Skillotron/Skillotron_5.jpg">
+                                                        <img class="fit-content" src="img/Skillotron/Skillotron_5.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tz-gallery" data-group="Skillotron">
+                                        <h3 class="section-title">Skillotron</h3>
+                                        <div class="row clearfix">
+                                            <div class="col-xs-12 col-sm-6">
+                                                <span class="roll"></span>
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Skillotron" href="img/Skillotron/Skillotron_1.jpg">
+                                                        <img src="img/Skillotron/Skillotron_1.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Skillotron" href="img/Skillotron/Skillotron_2.jpg">
+                                                        <img src="img/Skillotron/Skillotron_2.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class=" col-sm-4 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Skillotron" href="img/Skillotron/Skillotron_3.jpg">
+                                                        <img class="fit-content" src="img/Skillotron/Skillotron_3.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Skillotron" href="img/Skillotron/Skillotron_4.jpg">
+                                                        <img class="fit-content" src="img/Skillotron/Skillotron_4.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Skillotron" href="img/Skillotron/Skillotron_5.jpg">
+                                                        <img class="fit-content" src="img/Skillotron/Skillotron_5.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tz-gallery" data-group="DataArt">
+                                        <h3 class="section-title">Data Art</h3>
+                                        <div class="row clearfix">
+                                            <div class="col-xs-12 col-sm-4">
+                                                <span class="roll"></span>
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="DataArt" href="img/DataArt/DataArt_1.jpg">
+                                                        <img src="img/DataArt/DataArt_1.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="DataArt" href="img/DataArt/DataArt_2.jpg">
+                                                        <img src="img/DataArt/DataArt_2.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-8 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="DataArt" href="img/DataArt/DataArt_3.jpg">
+                                                        <img src="img/DataArt/DataArt_3.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tz-gallery" data-group="Perfectial">
+                                        <h3 class="section-title">Perfectial</h3>
+                                        <div class="row clearfix">
+                                            <div class="col-xs-12 col-sm-6">
+                                                <span class="roll"></span>
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Perfectial" href="img/Perfectial/Perfectial_1.jpg">
+                                                        <img src="img/Perfectial/Perfectial_1.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Perfectial" href="img/Perfectial/Perfectial_2.jpg">
+                                                        <img src="img/Perfectial/Perfectial_2.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Perfectial" href="img/Perfectial/Perfectial_3.jpg">
+                                                        <img src="img/Perfectial/Perfectial_3.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Perfectial" href="img/Perfectial/Perfectial_4.jpg">
+                                                        <img src="img/Perfectial/Perfectial_4.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tz-gallery" data-group="Symphony_Solutions">
+                                        <h3 class="section-title">Symphony Solutions</h3>
+                                        <div class="row clearfix">
+                                            <div class="col-xs-12 col-sm-6">
+                                                <span class="roll"></span>
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Symphony Solutions" href="img/Symphony_Solutions/Symphony_Solutions_1.jpg">
+                                                        <img src="img/Symphony_Solutions/Symphony_Solutions_1.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Symphony Solutions" href="img/Symphony_Solutions/Symphony_Solutions_2.jpg">
+                                                        <img src="img/Symphony_Solutions/Symphony_Solutions_2.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 d-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Symphony Solutions" href="img/Symphony_Solutions/Symphony_Solutions_3.jpg">
+                                                        <img src="img/Symphony_Solutions/Symphony_Solutions_3.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 d-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Symphony Solutions" href="img/Symphony_Solutions/Symphony_Solutions_4.jpg">
+                                                        <img src="img/Symphony_Solutions/Symphony_Solutions_4.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tz-gallery" data-group="TechMagic">
+                                        <h3 class="section-title">TechMagic</h3>
+                                        <div class="row clearfix">
+                                            <div class="col-xs-12 col-sm-8">
+                                                <span class="roll"></span>
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="TechMagic" href="img/TechMagic/TechMagic_1.jpg">
+                                                        <img src="img/TechMagic/TechMagic_1.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-3 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="TechMagic" href="img/TechMagic/TechMagic_2.jpg">
+                                                        <img src="img/TechMagic/TechMagic_2.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-3 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="TechMagic" href="img/TechMagic/TechMagic_3.jpg">
+                                                        <img src="img/TechMagic/TechMagic_3.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-3 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="TechMagic" href="img/TechMagic/TechMagic_4.jpg">
+                                                        <img src="img/TechMagic/TechMagic_4.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tz-gallery" data-group="Eleks">
+                                        <h3 class="section-title">Eleks</h3>
+                                        <div class="row clearfix">
+                                            <div class="col-xs-12 col-sm-6">
+                                                <span class="roll"></span>
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Eleks" href="img/Eleks/Eleks_1.jpg">
+                                                        <img src="img/Eleks/Eleks_1.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Eleks" href="img/Eleks/Eleks_2.jpg">
+                                                        <img src="img/Eleks/Eleks_2.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tz-gallery" data-group="Sombra">
+                                        <h3 class="section-title">Sombra</h3>
+                                        <div class="row clearfix">
+                                            <div class="col-xs-12 col-sm-4">
+                                                <span class="roll"></span>
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Sombra" href="img/Sombra/Sombra_1.jpg">
+                                                        <img src="img/Sombra/Sombra_1.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Sombra" href="img/Sombra/Sombra_2.jpg">
+                                                        <img src="img/Sombra/Sombra_2.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Sombra" href="img/Sombra/Sombra_3.jpg">
+                                                        <img src="img/Sombra/Sombra_3.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Sombra" href="img/Sombra/Sombra_4.jpg">
+                                                        <img src="img/Sombra/Sombra_4.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Sombra" href="img/Sombra/Sombra_5.jpg">
+                                                        <img src="img/Sombra/Sombra_5.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 d-sm-none">
+                                                <div class="thumbnail">
+                                                    <a class="lightbox" data-gr="Sombra" href="img/Sombra/Sombra_6.jpg">
+                                                        <img src="img/Sombra/Sombra_6.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<div class="col-xs-12"></div>-->
 
-/* Animations */
-.anim_arr1 {
-    -webkit-animation: an_left 1.2s infinite;
-}
-.anim_arr2 {
-    -webkit-animation: an_left .8s infinite;
-}
-@-webkit-keyframes an_left {
-    0% {transform: translateX(0);}
-    45% {transform: translateX(10px);}
-    45% {transform: translateX(10px);}
-    100% {transform: translateX(0);}
-}
+                                <!--<h3 class="section-title">Усі фото</h3>
+                                <label id="g-list-groups" for="folder1">Обрати фото по групам</label>-->
 
-/* Blocks */
-#main {
-    z-index: 2; /* slide under group 3 and 5 */
-}
-.container-space {
-    width: 230vw
-}
-.section {
-    width: 100vw;
-    height: 100vh;
-}
-.section > div {
-    padding-top: 75px
-}
-.section.section-container, .section.section-intro .block-actor-decor {
-    display: flex;
-    align-items: center
-}
-.section.section-container {
-    justify-content: center
-}
-.section.inline-section {
-    display: inline-flex;
-    vertical-align: top;
-    align-items: center;
-}
-.section-header-txt {
-    color: #f91f1f;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 500;/*800*/
-    transform: scale(.9, 1);
-    text-align: center;
-    font-size: 24px;
-}
-h1.section-header-txt > span {
-    white-space: nowrap
-}
-.section-header-txt.rsdf {
-    color: #f91f1f;
-    font-family: 'Ubuntu Mono', monospace;
-    /*font-family: 'Anonymous Pro', sans-serif;*/
-    /*font-family: 'Myriad Pro Regular', sans-serif;*/
-    font-weight: 800;
-    transform: scale(.9, 1);/*transform: scale(.85, 1);*/
-    text-align: center;
-}
-/*font-family: 'Anonymous Pro', monospace;*/
-/*font-family: 'PT Mono', monospace;*/
-.section-title {
-    margin-top: 10px;
-    font-size: 22px;
-    font-weight: 300;
-    text-align: center
-}
-/*.section-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}*/
-.section .section-content {
-    padding: 15px;
-    width: 50vw; 
-    max-height: 90vh;
-    font-weight: 300;
-    font-size: 16px;
-    /*background: -webkit-linear-gradient(top left, #fff rgba(255,255,255,.3));
-    background: -o-linear-gradient(bottom right, #fff, rgba(255,255,255,.3));
-    background: -moz-linear-gradient(bottom right, #fff, rgba(255,255,255,.3));
-    background: linear-gradient(to bottom right, #fff, rgba(255,255,255,.3));*/
-    /*background: url(img/bg_section.png);*/
-}
-.section.inline-section > div, .section .section-content {
-    /*background-position: 50% 50% !important;
-    background-size: 120% auto !important;
-    overflow: hidden;
-    transform: rotate(1deg);*/
-}
-.section.section-content .section-bg-cover {
-    left: 0;
-    position: absolute;
-    width: 100vw;
-    height: auto
-}
-.section .section-content-bg {
-    position: absolute;
-    border-radius: 50%;
-    background-position: 50% 50% !important;
-    background-size: 120% auto !important;
-    background-repeat: no-repeat !important
-}
-.section .section-content-bg > div {
-    margin: 25% auto;
-    padding: 0 30px
-}
-@media screen and (max-width: 1024px) {
-    .section .section-content-bg > div {
-        max-width: 90%
-    }
-}
-@media screen and (max-width: 767px) {
-    .section .section-content-bg > div {
-        margin-left: 90px;
-    }
-}
-h1.section-header-txt .hidden-link,
-h1.section-header-txt .hidden-link:hover, 
-h1.section-header-txt .hidden-link:active,
-h1.section-header-txt .hidden-link:after,
-h1.section-header-txt .hidden-link:visited {
-    color: #f91f1f !important;
-    font-weight: 400;
-    cursor: auto
-}
-.d-none { /* Bootstrap 4 style */
-    display: none
-}
-
-/* Styles for special categories
----------------------------------------- */
-/* Styles for particular sections */
-#section_2.section .section-content-bg {/*#section_2*/
-    top: 30vh;
-    width: 450px;
-    height: 450px;
-    right: 40vw;
-    /*background: -webkit-linear-gradient(top left, #fff rgba(255,255,255,.3));
-    background: -o-linear-gradient(bottom right, #fff, rgba(255,255,255,.3));
-    background: -moz-linear-gradient(bottom right, #fff, rgba(255,255,255,.3));
-    background: linear-gradient(to bottom right, #fff, rgba(255,255,255,.3));*/
-    background: linear-gradient(to bottom right, #5c2323, rgba(0,0,0,0.7));
-}
-#section_3.section .section-content-bg {/*#section_2*/
-    top: -23vh;
-    left: -25%;
-    width: 250vh;
-    height: 130vh;
-    background: linear-gradient(to bottom right, #002e33, rgba(0,0,0,.5));
-}
-#section_3.section .section-content-big {
-    position: absolute;
-    margin-top: -20vh;
-    width: 100%;
-}
-#section_3.section .section-content-bg > div {
-    margin: 50px auto 0;
-    width: 90vw;
-}
-#section_3.section  .section-content-big > div { /* Override native Bootstrap's .row (in situation) */
-    margin-left: 180px;
-    margin-right: 180px;
-}
-#section_3.section {
-    height: 80vh
-}
-#section_3.section .section-content {
-    transform-origin: 50% 50%;
-    transform: rotate(-0.1deg)
-}
-#section_3.section .section-content {
-    width: 80vw 
-}
-/*#section_3 .section-header-txt {
-    margin-bottom: 20px
-}*/
-#section_4.section {
-    height: 75vh
-}
-#section_4.section .section-content-bg {
-    width: 60vw;
-    display: flex;
-    height: -webkit-fill-available;
-    border-radius: 0;
-    background-position: top !important;
-    background-size: 100% auto !important;
-}
-#section_4 .section-content-bg > div {
-    margin: 90px auto;
-    max-width: 50%;
-}
-#section_4 img {
-    margin: 15px 0 20px;
-    max-width: 100px;
-}
-#section_4 p {
-    margin-bottom: 5px
-}
-
-/* Intro section */
-.section.section-intro .block-actor-decor img {
-    margin-top: -30vh;/*-155px (75px + 30px + 50px)*/
-    padding-left: 15vw;
-    max-height: 80vh;
-}
-.block-intro-text {
-    margin-top: 10vh
-}
-.block-intro-title > img {
-    max-height: 100px
-}
-.block-intro-title .letter-q {
-    position: absolute;
-    top: 0;
-    left: -90px;
-    width: 100%;
-    height: 100%;
-}
-.letter-q img {
-    max-width: 50px;
-    opacity: 0;
-}
-.letter-q1 {
-    position: absolute;
-    top: 78px;
-    left: -30px
-}
-#letter-q-circle {
-    width: 100px
-}
-#letter-q-circle1 {
-    width: 55px
-}
-#letter-q-circle.anim {
-    -moz-animation: rotation 10s infinite;
-    -ms-animation: rotation 10s infinite;
-    -o-animation: rotation 10s infinite;
-    -webkit-animation: rotation 10s infinite;
-    animation: rotation 10s infinite;
-    -ms-transform-origin: 50% 50%;
-    -webkit-transform-origin: 50% 50%;
-}
-#letter-q-circle1.anim {
-    -webkit-animation: rotation1 10s infinite;
-    animation: rotation1 10s infinite;
-    -webkit-transform-origin: 50% 50%;
-}
-#letter-q-line {
-    width: 17px;
-    height: auto;
-    -ms-transform-origin: 50% 50%;
-    -webkit-transform-origin: 50% 50%;
-    transform: rotate(-25deg)
-}
-#robot-sparks-decor {
-    opacity: 0;
-}
-#robot-sparks-decor.anim {
-    -moz-animation: sparks 1s;
-    -ms-animation: sparks 1s;
-    -o-animation: sparks 1s;
-    -webkit-animation: sparks 1s;
-    animation: sparks 1s;
-    /*animation-timing-function: cubic-bezier(.65,0,.32,1.55);*/
-}
-#robotdebris.anim {
-    -moz-animation: dmove 1s;
-    -ms-animation: dmove 1s;
-    -o-animation: dmove 1s;
-    -webkit-animation: dmove 1s;
-    animation: dmove 1s;
-}
-/*.letter-q.anim img {
-    -moz-animation: q_appear 4s;
-    -ms-animation: q_appear 4s;
-    -o-animation: q_appear 4s;
-    -webkit-animation: q_appear 4s;
-    animation: q_appear 4s;
-}*/
-/*.block-intro-title.anim #letter-q-circle {
-    -moz-animation: gear_r 8s infinite;
-    -ms-animation: gear_r 8s infinite;
-    -o-animation: gear_r 8s infinite;
-    -webkit-animation: gear_r 8s infinite;
-    animation: gear_r 8s;
-    -ms-transform-origin: 50% 50%;
-    -webkit-transform-origin: 50% 50%;
-}*/
-@keyframes sparks {
-    0%, 25% {opacity: 0}
-    25% {opacity: .5}
-    37.5% {opacity: 1}
-    75% {opacity: .8}
-    75%, 100% {opacity: 0}
-}
-@keyframes rotation {
-    from {transform: rotate(0deg)}
-    to {transform: rotate(360deg)}
-}
-@keyframes rotation1 {
-    from {transform: rotate(0deg)}
-    to {transform: rotate(-360deg)}
-}
-@keyframes dmove {
-    from {transform: translate(0,0)}
-    to {transform: translate(100px,300px)}
-}
-.header-title-txt {
-    margin-top: 30px
-}
-.header-title-txt img {
-    max-height: 80px
-}
-
-/* Gallery */
-/* Companies - tree hierarchy */
-.list-companies {
-    margin-top: 50px;
-    transform: rotate(-3deg)
-}
-.list-companies label, .list-companies ul li, .list-companies ul li a {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 300;
-}
-.list-companies > li > label {
-    font-size: 22px
-}
-#gallery {
-    float: right
-}
-.gallery-container {
-    /*width: 25000px;*/
-    /*max-height: 90vh;
-    margin-bottom: 30px;
-    margin-top: 30px;*/
-}
-.gallery-container h1 {
-    text-align: center;
-    /*font-family: 'Menlo Regular';*/
-    font-size: 1.5em;
-    font-weight: 600;
-    color: #e71746/*#d7066c*/
-}
-.gallery-container p.description {
-    text-align: center;
-    margin: 30px auto;
-    font-size: 18px;
-    color: #85878c;
-}
-.tz-gallery {
-    display: none
-}
-.tz-gallery.current {
-    display: block;
-    -webkit-animation: tz_show 1s;
-    animation: tz_show 1s;
-}
-@keyframes tz_show {
-    from {opacity: 0}
-    to {opacity: 1}
-}
-.tz-gallery.row {
-    margin-left: 0 !important;
-    margin-right: 0 !important
-}
-/*.tz-gallery .thumbnail .fit-content {
-    margin-right: auto;
-    margin-left: 0;
-    max-height: 20vh
-}*/
-.g-root {
-    padding-inline-start: 20px
-}
-#gallery .tz-gallery .thumbnail {
-    background-color: transparent;
-    border: none
-}
-.tz-gallery .thumbnail.active img {
-    border: 2px solid rgba(255, 255, 255, 0.7);
-}
-.tz-gallery, .thumbnail {
-    padding: 0;
-    transition: 0.2s ease-in-out;
-}
-.tz-gallery .thumbnail:hover {
-    transform: translateY(-10px) scale(1.02);
-}
-.invitation, .tz-gallery .thumbnail, .tz-gallery .lightbox img {
-    border-radius: 3px
-}
-.invitation img {
-    max-width: 40px
-}
-.lightbox {
-    background-color: transparent;
-}
-#baguetteBox-overlay figcaption {
-    background-color: transparent !important;
-    font-family: 'Roboto Condensed', sans-serif !important;
-    text-shadow: 5px 5px 10px #000;
-    font-size: 28px;
-    font-weight: 300
-}
-#previous-button, #next-button {
-    display: block !important
-}
-.tz-gallery .caption {
-    padding: 26px 30px;
-    text-align: center;
-}
-.tz-gallery .caption p, .tz-gallery .caption pre {
-    font-size: 16px;
-    font-family: 'Menlo Regular';
-    font-size: 16px;
-    margin: 0;
-}
-
-/* Info block */
-.soc_c {
-    width: 50%;
-    text-align: center
-}
-.soc_c img {
-    padding: 0 15px;
-    width: 70px;
-}
-.baguetteBox-button {
-    background-color: transparent !important;
-}
-
-/*.spec_items {
-    padding: 5px;
-    background: #fff;
-    background: -webkit-linear-gradient(top, #fff rgba(255,255,255,.7));
-    background: -o-linear-gradient(bottom, #fff, rgba(255,255,255,.7));
-    background: -moz-linear-gradient(bottom, #fff, rgba(255,255,255,.7));
-    background: linear-gradient(to bottom, #fff, rgba(255,255,255,.7));
-}*/
-
-/*#carousel {
-    overflow: visible !important;
-    visibility: visible !important;
-}
-#carousel .cloud9-item, #buttons button {
-    cursor: pointer;
-}
-#carousel .cloud9-item {
-    width: 33vw !important;
-    height: auto
-}*/
-
-/*footer {
-    bottom: 0;
-    padding: 5px;
-    text-align: center;
-}
-.tz-gallery .caption h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 0;
-}*/
-/*.tz-gl-first {
-    background: #fff;
-    background: -webkit-linear-gradient(top left, rgba(255,255,255,.7), rgba(0,0,0,0));
-    background: -o-linear-gradient(bottom right, #fff, rgba(0,0,0,0));
-    background: -moz-linear-gradient(bottom right, #fff, rgba(0,0,0,0));
-    background: linear-gradient(to bottom right, rgba(255,255,255,.7), rgba(0,0,0,0));
-}*/
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <ol id="g-list" class="list-companies">
+                                        <li>
+                                            <label id="g-list-groups" for="folder1">Обрати фото по групам</label> <input type="checkbox" id="folder1"/>
+                                            <ol>
+                                                <li>
+                                                    <label for="f1" name="year">IT Quest 3.0 (2018)</label> <input type="checkbox" id="f1"/>
+                                                    <ol>
+                                                        <li>
+                                                            <ol>
+                                                                <li>
+                                                                    <label for="subfolder1" name="company" data-target="Skillotron">Skillotron</label> <input type="checkbox" id="subfolder1"/>
+                                                                    <ol name="company">
+                                                                        <li class="file company-link"><a title="Перейти на офіційний сайт компанії" href="https://skillotron.com/" target="_blank">Офіційний сайт</a></li>
+                                                                        <li class="file company-link"><a title="Перейти на сторінку Facebook" href="https://www.facebook.com/Perfectial/?fref=mentions" target="_blank">Сторінка на Facebook</a></li>
+                                                                    </ol>
+                                                                </li>
+                                                                <li>
+                                                                    <label for="subfolder2" name="company" data-target="DataArt">DataArt</label> <input type="checkbox" id="subfolder2" name="company"/> 
+                                                                    <ol name="company">
+                                                                        <li class="file company-link"><a title="Перейти на офіційний сайт компанії" href="https://dataart.ua/career/how-to-get-in/" target="_blank">Офіційний сайт</a></li>
+                                                                        <li class="file company-link"><a title="Перейти на сторінку Facebook" href="https://www.facebook.com/Perfectial/?fref=mentions" target="_blank">Сторінка на Facebook</a></li>
+                                                                    </ol>
+                                                                </li>
+                                                            </ol>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                                <li>
+                                                    <label for="f2" name="year">IT Quest 2.0 (2017)</label> <input type="checkbox" id="f2"/>
+                                                    <ol>
+                                                        <li>
+                                                            <ol>
+                                                                <li>
+                                                                    <label for="subfolder3" name="company" data-target="Perfectial">Perfectial</label> <input type="checkbox" id="subfolder3" name="company"/> 
+                                                                    <ol name="company">
+                                                                        <li class="file company-link"><a title="Перейти на офіційний сайт компанії" href="https://perfectial.com/" target="_blank">Офіційний сайт</a></li>
+                                                                        <li class="file company-link"><a title="Перейти на сторінку Facebook" href="https://www.facebook.com/Perfectial/?fref=mentions" target="_blank">Сторінка на Facebook</a></li>
+                                                                    </ol>
+                                                                </li>
+                                                                <li>
+                                                                    <label for="subfolder4" name="company" data-target="Symphony_Solutions">Symphony Solutions</label> <input type="checkbox" id="subfolder4" name="company"/>
+                                                                    <ol>
+                                                                        <li class="file company-link"><a title="Перейти на офіційний сайт компанії" href="https://www.symphony-solutions.eu/" target="_blank">Офіційний сайт</a></li>
+                                                                        <li class="file company-link"><a title="Перейти на сторінку Facebook" href="https://www.facebook.com/Perfectial/?fref=mentions" target="_blank">Сторінка на Facebook</a></li>
+                                                                    </ol>
+                                                                </li>
+                                                                <li>
+                                                                    <label for="subfolder5" name="company" data-target="TechMagic">Tech Magic</label> <input type="checkbox" id="subfolder5" name="company"/> 
+                                                                    <ol>
+                                                                        <li class="file company-link"><a title="Перейти на офіційний сайт компанії" href="https://www.techmagic.co/" target="_blank">Офіційний сайт</a></li>
+                                                                        <li class="file company-link"><a title="Перейти на сторінку Facebook" href="https://www.facebook.com/Perfectial/?fref=mentions" target="_blank">Сторінка на Facebook</a></li>
+                                                                    </ol>
+                                                                </li>
+                                                                <li>
+                                                                    <label for="subfolder6" name="company" data-target="Eleks">Eleks</label> <input type="checkbox" id="subfolder6" name="company"/> 
+                                                                    <ol>
+                                                                        <li class="file company-link"><a title="Перейти на офіційний сайт компанії" href="https://eleks.com/" target="_blank">Офіційний сайт</a></li>
+                                                                        <li class="file company-link"><a title="Перейти на сторінку Facebook" href="https://www.facebook.com/Perfectial/?fref=mentions" target="_blank">Сторінка на Facebook</a></li>
+                                                                    </ol>
+                                                                </li>
+                                                                <li>
+                                                                    <label for="subfolder7" name="company" data-target="Sombra">Sombra</label> <input type="checkbox" id="subfolder7" name="company"/> 
+                                                                    <ol>
+                                                                        <li class="file company-link"><a title="Перейти на офіційний сайт компанії" href="https://sombrainc.com/" target="_blank">Офіційний сайт</a></li>
+                                                                        <li class="file company-link"><a title="Перейти на сторінку Facebook" href="https://www.facebook.com/Perfectial/?fref=mentions" target="_blank">Сторінка на Facebook</a></li>
+                                                                    </ol>
+                                                                </li>
+                                                            </ol>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="g_block caption">
+                            <p><a href="https://www.facebook.com/Perfectial/?fref=mentions">Perfectial</a></p>
+                            <p><a href="https://www.facebook.com/hashtag/perfectial?source=feed_text">#perfectial</a></p>
+                            <p><a href="https://www.facebook.com/Symphony.Solutions/?fref=mentions">Symphony Solutions</a></p>
+                            <p><a href="https://www.facebook.com/hashtag/symphonysolutions?source=feed_text">#symphonysolutions</a></p>
+                            <p><a href="https://www.facebook.com/TechMagic.co/?fref=mentions">Tech Magic</a></p>
+                            <p><a href="https://www.facebook.com/hashtag/techmagic?source=feed_text">#techmagic</a></p>
+                            <p><a href="https://www.facebook.com/veselyiktulhu/?fref=mentions">Веселий Ктулху</a></p>
+                            <p><a href="https://www.facebook.com/ELEKS.Inside/?fref=mentions">ELEKS Inside</a></p>
+                            <p><a href="https://www.facebook.com/hashtag/eleks?source=feed_text">#eleks</a></p>
+                            <p><a href="https://www.facebook.com/sombra.software/?fref=mentions">Sombra</a></p>
+                            <p><a href="https://www.facebook.com/hashtag/sombrafamily?source=feed_text">#sombrafamily</a></p>
+                        </div>-->
+                    </div>
+                </div>
+                <div id="section_4" class="section section-container">
+                    <div id="info" class="section-content">
+                        <div class="section-content-bg" style="background:url(img/bg_moon.png)">
+                        <div class="row">
+                            <h1 class="section-header-txt">Деталі</h1>
+                            <p>Квест по ІТ-компаніях Львова для студентів.</p>
+                            <p>Організатори &mdash; <a href="https://www.facebook.com/pb.ikni/">Профбюро ІКНІ</a></p>
+                            <p>Проводився тричі весною 2016, 2017 та 2018 років.</p>
+                            <div class="text-center"><a href="https://www.facebook.com/pb.ikni/"><img src="img/logo_profpuro.png"></a></div>
+                            <p>Правила IT-квесту на <a href="https://docs.google.com/document/d/1AWy7v9Yt-auQEG0qeMJNBPKAinhDH4flXcNNTmRjin4/edit">Google Docs</a>.</p>
+                            <p>Деталі про квест також знаходяться у соцмережах:</p>
+                            <div style="display: flex;">
+                                <div class="soc_c"><a href="https://www.facebook.com/itquest.lviv/"><img src="img/s_fb.png"></a></div>
+                                <div class="soc_c"><a href="https://www.instagram.com/it_quest"><img src="img/s_ins.png"></a></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax__layer parallax__layer--back">
+                <div class="section section-intro">
+                    <div class="row">
+                        <div class="col-xs-6 block-actor-decor text-center">
+                            <div>
+                                <img id="robot-sparks-decor" class="anim" src="img/robot_sparks.png" alt="robotSparks"><!--class="anim" -->
+                                <img id="robotdebris" class="anim" src="img/robot_itq_debris.png" alt="robotITQDebris"><!--class="anim" -->
+                            </div>
+                        </div>
+                        <div id="header-right" class="col-xs-6 block-intro-text">
+                            <div class="block-intro-title">
+                                <div class="letter-q anim">
+                                    <svg id="letter-q-circle" class="anim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><!--class="anim" -->
+                                        <circle fill="#4c2525" cx="25" cy="25" r="12"></circle>
+                                        <path style="stroke:#361606;stroke-width:2px;fill:#c60f0f" d="M47.16,21.221l-5.91-0.966c-0.346-1.186-0.819-2.326-1.411-3.405l3.45-4.917c0.279-0.397,0.231-0.938-0.112-1.282 l-3.889-3.887c-0.347-0.346-0.893-0.391-1.291-0.104l-4.843,3.481c-1.089-0.602-2.239-1.08-3.432-1.427l-1.031-5.886 C28.607,2.35,28.192,2,27.706,2h-5.5c-0.49,0-0.908,0.355-0.987,0.839l-0.956,5.854c-1.2,0.345-2.352,0.818-3.437,1.412l-4.83-3.45 c-0.399-0.285-0.942-0.239-1.289,0.106L6.82,10.648c-0.343,0.343-0.391,0.883-0.112,1.28l3.399,4.863 c-0.605,1.095-1.087,2.254-1.438,3.46l-5.831,0.971c-0.482,0.08-0.836,0.498-0.836,0.986v5.5c0,0.485,0.348,0.9,0.825,0.985 l5.831,1.034c0.349,1.203,0.831,2.362,1.438,3.46l-3.441,4.813c-0.284,0.397-0.239,0.942,0.106,1.289l3.888,3.891 c0.343,0.343,0.884,0.391,1.281,0.112l4.87-3.411c1.093,0.601,2.248,1.078,3.445,1.424l0.976,5.861C21.3,47.647,21.717,48,22.206,48 h5.5c0.485,0,0.9-0.348,0.984-0.825l1.045-5.89c1.199-0.353,2.348-0.833,3.43-1.435l4.905,3.441 c0.398,0.281,0.938,0.232,1.282-0.111l3.888-3.891c0.346-0.347,0.391-0.894,0.104-1.292l-3.498-4.857 c0.593-1.08,1.064-2.222,1.407-3.408l5.918-1.039c0.479-0.084,0.827-0.5,0.827-0.985v-5.5C47.999,21.718,47.644,21.3,47.16,21.221z M25,32c-3.866,0-7-3.134-7-7c0-3.866,3.134-7,7-7s7,3.134,7,7C32,28.866,28.866,32,25,32z"/>
+                                    </svg>
+                                    <!--<img src="img/line_letter_q.png" alt="lineLetterQ">-->
+                                    <svg id="letter-q-line" xmlns="http://www.w3.org/2000/svg" width="0.555486in" height="1.59702in" viewBox="0 0 40 115">
+                                        <path style="fill:#a25151;stroke:#361606;stroke-width:2px" fill="#a25151" stroke="black"
+                                                d="M 32.75,112.50
+                                                C 32.75,112.50 8.63,112.50 8.75,112.50
+                                                    3.00,112.13 2.63,109.13 10.63,23.00
+                                                    10.63,22.88 29.13,23.00 29.25,23.06
+                                                    34.75,74.13 35.75,96.13 36.38,101.75
+                                                    37.13,108.75 36.88,112.38 32.75,112.50M 51.75,122.00M 57.25,111.63"/>
+                                        <circle style="fill:#a25151;stroke:#361606;stroke-width:2px" cx="20" cy="17" r="12"></circle>
+                                    </svg>
+                                </div>
+                                <div class="letter-q1">
+                                    <svg id="letter-q-circle1" class="anim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><!--class="anim" -->
+                                        <circle fill="#361606" cx="25" cy="25" r="12"></circle>
+                                        <path style="stroke:#361606;stroke-width:2px;fill:#804040" d="M47.16,21.221l-5.91-0.966c-0.346-1.186-0.819-2.326-1.411-3.405l3.45-4.917c0.279-0.397,0.231-0.938-0.112-1.282 l-3.889-3.887c-0.347-0.346-0.893-0.391-1.291-0.104l-4.843,3.481c-1.089-0.602-2.239-1.08-3.432-1.427l-1.031-5.886 C28.607,2.35,28.192,2,27.706,2h-5.5c-0.49,0-0.908,0.355-0.987,0.839l-0.956,5.854c-1.2,0.345-2.352,0.818-3.437,1.412l-4.83-3.45 c-0.399-0.285-0.942-0.239-1.289,0.106L6.82,10.648c-0.343,0.343-0.391,0.883-0.112,1.28l3.399,4.863 c-0.605,1.095-1.087,2.254-1.438,3.46l-5.831,0.971c-0.482,0.08-0.836,0.498-0.836,0.986v5.5c0,0.485,0.348,0.9,0.825,0.985 l5.831,1.034c0.349,1.203,0.831,2.362,1.438,3.46l-3.441,4.813c-0.284,0.397-0.239,0.942,0.106,1.289l3.888,3.891 c0.343,0.343,0.884,0.391,1.281,0.112l4.87-3.411c1.093,0.601,2.248,1.078,3.445,1.424l0.976,5.861C21.3,47.647,21.717,48,22.206,48 h5.5c0.485,0,0.9-0.348,0.984-0.825l1.045-5.89c1.199-0.353,2.348-0.833,3.43-1.435l4.905,3.441 c0.398,0.281,0.938,0.232,1.282-0.111l3.888-3.891c0.346-0.347,0.391-0.894,0.104-1.292l-3.498-4.857 c0.593-1.08,1.064-2.222,1.407-3.408l5.918-1.039c0.479-0.084,0.827-0.5,0.827-0.985v-5.5C47.999,21.718,47.644,21.3,47.16,21.221z M25,32c-3.866,0-7-3.134-7-7c0-3.866,3.134-7,7-7s7,3.134,7,7C32,28.866,28.866,32,25,32z"/>
+                                    </svg>
+                                </div>
+                                <img src="img/header_text.png" alt="headerText">
+                            </div>
+                            <div class="header-title-txt"><img src="img/subheader_text.png" alt="subheaderText_Header"></div>
+                            <!--<p class="header-title-txt"><span class="bigger-txt weighty-txt">4.04</span> thats a<span class="weighty-txt">n error</span></p>
+                            <p><span class="bigger-txt">reborn</span></p>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax__layer parallax__layer--deep">
+                <div class="title"></div>
+            </div>
+        </div>  
+    </div>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>-->
+    <script id="jqe" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.scrollTo.js" charset="utf-8"></script>
+    
+    <script src="dist/scrollreveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
