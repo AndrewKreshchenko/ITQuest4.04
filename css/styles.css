@@ -209,8 +209,9 @@ h1.section-header-txt .hidden-link:visited {
 /* Styles for particular sections */
 #section_2.section .section-content-bg {/*#section_2*/
     top: 30vh;
-    width: 60vh;
-    height: 60vh;
+    width: 450px;
+    height: 450px;
+    right: 40vw;
     /*background: -webkit-linear-gradient(top left, #fff rgba(255,255,255,.3));
     background: -o-linear-gradient(bottom right, #fff, rgba(255,255,255,.3));
     background: -moz-linear-gradient(bottom right, #fff, rgba(255,255,255,.3));
@@ -236,13 +237,6 @@ h1.section-header-txt .hidden-link:visited {
 #section_3.section  .section-content-big > div { /* Override native Bootstrap's .row (in situation) */
     margin-left: 180px;
     margin-right: 180px;
-}
-@media screen and (max-width: 1024px) {
-    #section_2.section .section-content-bg {
-        width: 450px;
-        height: 450px;
-        right: 40vw;
-    }
 }
 #section_3.section {
     height: 80vh
@@ -282,8 +276,12 @@ h1.section-header-txt .hidden-link:visited {
 
 /* Intro section */
 .section.section-intro .block-actor-decor img {
-    margin-top: -20vh;/*-155px (75px + 30px + 50px)*/
+    margin-top: -30vh;/*-155px (75px + 30px + 50px)*/
+    padding-left: 15vw;
     max-height: 80vh;
+}
+.block-intro-text {
+    margin-top: 10vh
 }
 .block-intro-title > img {
     max-height: 100px
