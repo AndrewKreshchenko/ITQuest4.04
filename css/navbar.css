@@ -23,7 +23,8 @@
     bottom: 10px;
     width: 60px;
     z-index: 3;
-    transform-origin: 50% 50%
+    transform-origin: 50% 50%;
+    cursor: pointer
 }
 #next_section {
     right: 20px
