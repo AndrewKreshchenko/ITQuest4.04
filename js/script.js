@@ -59,7 +59,7 @@ function to_section(i, b) {
     var $el = $('#section_'+i);
     if (typeof $el !== 'undefined') { // it may be also necessary to check if $el !== null
         let offset = $el.offset();
-        console.log(ind_, i, b);
+        //console.log(ind_, i, b);
 
         $('#next_s').removeClass('end');
         $('#prev_s').removeClass('begin');
@@ -204,7 +204,7 @@ $('#btn-menu-collapse').on('click', function() {
 $('#btn-menu-open').on('click', function() {
     var $li = $('.navbar [data-nav]');
     $('.navbar').addClass('opened');
-    autoCollapseMenu();
+    //autoCollapseMenu();
     /*$li.each(function(i, el) {
         console.log(el);
        $(el).animate({'transform': 'translateX(-5px)', 'transform': 'rotate(2deg)'}, 1000); 
