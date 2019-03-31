@@ -15,29 +15,21 @@
     <link rel="stylesheet" media="all" href="css/navbar.css">
     <link rel="stylesheet" media="all" href="css/responsive.css"/>
     <link rel="stylesheet" href="css/styles_tree.css"/>
-    <!--<link rel="stylesheet" href="dist/treeview/treeview.css"/>-->
 </head>
 <body>
-	<!--<ul class="nav">
-	    <li class="loud"><a href="#">Home</a></li>
-		<li class="loud"><a href="#">About</a></li>
-		<li class="loud"><a href="#">Case studies</a></li>
-		<li class="loud"><a href="#">Clients</a></li>
-		<li class="loud"><a href="#">Contact</a></li>
-	</ul>-->
     <div class="navbar opened">
         <ul>
-            <li id="btn-menu-open" class="btn-3"><a title="Розгорнути меню" href="#">Меню</a></li>
-            <li class="btn-3 nav-item active"><a title="Перейти до початку" href="#" data-nav="1">IT Quest 2019</a></li>
-            <li class="btn-3 nav-item"><a title="Перейти до вітання" href="#" data-nav="2">Вітаємо 2</a></li>
-            <li class="btn-3 nav-item"><a title="Перейти до галереї" href="#" data-nav="3">Галерея</a></li>
-            <li class="btn-3 nav-item"><a title="Перейти до деталей" href="#" data-nav="4">Деталі</a></li>
+            <li id="btn-menu-open" class="nav-btn"><a title="Розгорнути меню" href="#">Меню</a></li>
+            <li class="nav-item active"><a title="Перейти до початку" href="#" data-nav="1">IT Quest 2019</a></li>
+            <li class="nav-item"><a title="Перейти до вітання" href="#" data-nav="2">Вітаємо 2</a></li><!--nav-btn nav-item-->
+            <li class="nav-item"><a title="Перейти до галереї" href="#" data-nav="3">Галерея</a></li>
+            <li class="nav-item"><a title="Перейти до деталей" href="#" data-nav="4">Деталі</a></li>
             <li id="btn-menu-collapse"><a title="Приховати меню" href="#"><img src="img/nav_collapse.png" alt="navCollapse"></a></li>
         </ul>
     </div>
     <div class="navbar-bottom">
-        <img id="next_section" src="img/next.png" alt="arrowNavNext">
-        <img id="prev_section" src="img/prev.png" alt="arrowNavPrev">
+        <img id="next_s" class="anim horiz" src="img/next.png" alt="arrowNavNext">
+        <img id="prev_s" class="begin anim horiz" src="img/prev.png" alt="arrowNavPrev">
     </div>
 
     <div id="main" class="parallax">
@@ -58,7 +50,7 @@
                             <!--<img class="section-bg-cover" src="img/bg_moon.png">-->
                             <div id="inv" class="invitation">
                                 <h1 class="section-header-txt">
-                                    <span>Вітаємо у нашій команді</span> <span>на IT Quest <a href="https://eleks.com/404" class="hidden-link">4.04</a>!</span>
+                                    <span>Вітаємо у нашій команді</span> <span>на IT Quest <a href="404.html" class="hidden-link">4.04</a>!</span><!--https://eleks.com/404-->
                                 </h1>
                                 <div class="text-center">
                                     <p class="text-center">IT QUEST has come! Сьогодні довгоочікувана подія, яка дасть змогу тобі відчути себе в реальному IT-середовищі та відкрити нові горизонти. Тож поквапся, твій час спробувати себе настав!</p>
@@ -453,19 +445,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="g_block caption">
-                            <p><a href="https://www.facebook.com/Perfectial/?fref=mentions">Perfectial</a></p>
-                            <p><a href="https://www.facebook.com/hashtag/perfectial?source=feed_text">#perfectial</a></p>
-                            <p><a href="https://www.facebook.com/Symphony.Solutions/?fref=mentions">Symphony Solutions</a></p>
-                            <p><a href="https://www.facebook.com/hashtag/symphonysolutions?source=feed_text">#symphonysolutions</a></p>
-                            <p><a href="https://www.facebook.com/TechMagic.co/?fref=mentions">Tech Magic</a></p>
-                            <p><a href="https://www.facebook.com/hashtag/techmagic?source=feed_text">#techmagic</a></p>
-                            <p><a href="https://www.facebook.com/veselyiktulhu/?fref=mentions">Веселий Ктулху</a></p>
-                            <p><a href="https://www.facebook.com/ELEKS.Inside/?fref=mentions">ELEKS Inside</a></p>
-                            <p><a href="https://www.facebook.com/hashtag/eleks?source=feed_text">#eleks</a></p>
-                            <p><a href="https://www.facebook.com/sombra.software/?fref=mentions">Sombra</a></p>
-                            <p><a href="https://www.facebook.com/hashtag/sombrafamily?source=feed_text">#sombrafamily</a></p>
-                        </div>-->
                     </div>
                 </div>
                 <div id="section_4" class="section section-container">
@@ -537,7 +516,7 @@
         </div>  
     </div>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>-->
-    <script id="jqe" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="libs/jquery.min.js"></script>
     <script type="text/javascript" src="libs/jquery.scrollTo.js" charset="utf-8"></script>
     
