@@ -1,16 +1,9 @@
 /* General styles
 ---------------------------------------- */
-/*@font-face {
-    font-family: 'Menlo Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Menlo Regular'), url('Menlo-Regular.woff') format('woff');
-}*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&subset=cyrillic');
-/*@import url('https://fonts.googleapis.com/css?family=PT+Mono|Roboto+Mono:400,500,700&subset=cyrillic,cyrillic-ext');*/
 @import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,600,700,800,900&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|PT+Sans:400,700|Roboto+Condensed:300,400,700&subset=cyrillic,cyrillic-ext');
-@font-face {
+/*@font-face {
     font-family: 'Myriad Pro Light';
     font-style: normal;
     font-weight: normal;
@@ -21,11 +14,9 @@
     font-style: normal;
     font-weight: normal;
     src: local('Myriad Pro Regular'), url('fonts/Myriad_Pro_Regular.ttf') format('ttf');
-}
+}*/
 
 body {
-    /*background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); min-height: 30vh;*/
-    /*background-color: #201234;*/
     font: normal 16px sans-serif;
 }
 ::-moz-selection {background: #552020}
@@ -38,15 +29,10 @@ p, a, button, li, label, code, pre, h1, h2, h3 {
     font-family: 'Roboto Condensed', sans-serif;
     color: rgba(255,255,255, .75)
 }
-p, a, pre {
-    /*font-family: 'PT Sans', sans-serif;*/
-    /* font-family: 'Open Sans Condensed', sans-serif; */
-    /* font-family: 'Droid Sans', sans-serif; */
-    outline: none;
-    border: none;
-}
 p, pre, button, li, label, code {
     font-size: 16px;
+    outline: none;
+    border: none
 } 
 a {
     font-weight: 300;
@@ -251,6 +237,8 @@ h1.section-header-txt .hidden-link:visited {
 /*#section_3 .section-header-txt {
     margin-bottom: 20px
 }*/
+
+/* Info block */
 #section_4.section {
     height: 75vh
 }
@@ -273,10 +261,18 @@ h1.section-header-txt .hidden-link:visited {
 #section_4 p {
     margin-bottom: 5px
 }
+.social {
+    width: 50%;
+    text-align: center
+}
+.social img {
+    padding: 0 15px;
+    width: 70px;
+}
 
 /* Intro section */
 .section.section-intro .block-actor-decor img {
-    margin-top: -30vh;/*-155px (75px + 30px + 50px)*/
+    margin-top: -20vh;/*-155px (75px + 30px + 50px)*/
     padding-left: 15vw;
     max-height: 80vh;
 }
@@ -486,20 +482,8 @@ h1.section-header-txt .hidden-link:visited {
     text-align: center;
 }
 .tz-gallery .caption p, .tz-gallery .caption pre {
-    font-size: 16px;
-    font-family: 'Menlo Regular';
-    font-size: 16px;
     margin: 0;
-}
-
-/* Info block */
-.soc_c {
-    width: 50%;
-    text-align: center
-}
-.soc_c img {
-    padding: 0 15px;
-    width: 70px;
+    font-size: 16px
 }
 .baguetteBox-button {
     background-color: transparent !important;
