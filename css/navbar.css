@@ -140,19 +140,19 @@
 }
 .navbar ul li:nth-child(1) {
     padding: 5px;
-    transform: translateX(-7px) rotate(0);
+    transform: translateX(0) rotate(0);
 }
 .navbar.opened ul li:nth-child(2) {
-    transform: translateX(-8px) rotate(3deg);
+    transform: translateX(-1px) rotate(4deg);
 }
 .navbar.opened ul li:nth-child(3) {
-    transform: translateX(-10px) rotate(5deg);
+    transform: translateX(-4px) rotate(8deg);
 }
 .navbar.opened ul li:nth-child(4) {
-    transform: translateX(-13px) rotate(7deg);
+    transform: translateX(-8px) rotate(12deg);
 }
 .navbar.opened ul li:nth-child(5) {
-    transform: translateX(-18px) rotate(12deg);
+    transform: translateX(-15px) rotate(16deg);
 }
 .navbar ul li, .g_block .caption {
     margin: 2px 0;
@@ -228,9 +228,9 @@
 
 /* Responsive navbar */
 @media screen and (max-width: 1024px) {
-    .navbar a {
+    /*.navbar a {
         font-size: 17px
-    }
+    }*/
     #btn-menu-collapse {
         margin: 1.6rem 1.6rem 1.6rem 0 !important;
         width: 35px;
@@ -246,27 +246,27 @@
         left: -35px
     }
     .navbar ul li:nth-child(1) {
-        transform: translateX(7px) rotate(-1deg);
+        transform: translateX(0) rotate(0);
     }
     .navbar.opened ul li:nth-child(2) {
-        transform: translateX(5px) rotate(-2deg);
+        transform: translateX(1px) rotate(-2deg);
     }
     .navbar.opened ul li:nth-child(3) {
-        transform: translateX(3px) rotate(-4deg);
+        transform: translateX(4px) rotate(-6deg);
     }
     .navbar.opened ul li:nth-child(4) {
-        transform: translateX(7px) rotate(-8deg);
+        transform: translateX(10px) rotate(-9deg);
     }
     .navbar.opened ul li:nth-child(5) {
-        transform: translateX(15px) rotate(-14deg);
+        transform: translateX(18px) rotate(-14deg);
     }
     #btn-menu-collapse {
         margin: 0 4.2rem 1.6rem !important;
-        -webkit-transform: rotate(-25deg);
-        -moz-transform: rotate(-25deg);
-        -o-transform: rotate(-25deg);
-        -ms-transform: rotate(-25deg);
-        transform: rotate(-25deg);
+        -webkit-transform: rotate(-22deg);
+        -moz-transform: rotate(-22deg);
+        -o-transform: rotate(-22deg);
+        -ms-transform: rotate(-22deg);
+        transform: rotate(-22deg);
     }
     #btn-menu-collapse a {
         padding: 15px 5px 0 0 !important;
