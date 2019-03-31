@@ -1,5 +1,11 @@
 /* Containers */
 /*@media only screen and (max-width: 768px) and (orientation: landscape) {*/
+@media screen and (max-device-width: 1440px) {
+    /*#section_3.section .section-content-bg {
+        left: -25%;
+        width: 170vh
+    }*/
+}
 @media screen and (max-width: 1366px) {
     .section .section-content {
         font-size: 18px
@@ -32,6 +38,12 @@
         max-height: 15vh;
         height: fit-content
     }*/
+}
+@media screen and (min-width: 768px) and (orientation: portrait) {
+    .section.section-intro .block-actor-decor img {
+        margin-top: 0;
+        max-height: 55vh !important
+    }
 }
 @media screen and (max-width: 1024px) {
     p, pre, button, li, label, code {

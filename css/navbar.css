@@ -26,20 +26,69 @@
     transform-origin: 50% 50%;
     cursor: pointer
 }
-#next_section {
+#next_s {
     right: 20px
 }
-#prev_section {
+#prev_s {
     left: 20px
 }
 .navbar-bottom img {
     width: 60px
 }
+.navbar-bottom .horiz {
+    /*-webkit-animation: to_horiz .5s;
+    animation: to_horiz .5s*/
+}
+.navbar-bottom .vert {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    /*-webkit-animation: to_vert .5s;
+    animation: to_vert .5s*/
+}
+#prev_s.begin, #next_s.end {
+    display: none
+}
+#next_s.horiz, #next_s.horiz.anim {
+    -webkit-animation: forward_h 2s;
+    animation: forward_h 2s
+}
+#prev_s.horiz.anim {
+    -webkit-animation: backward_h 2s;
+    animation: backward_h 2s
+}
+#next_s.vert.anim {
+    -webkit-animation: forward_v 2s;
+    animation: forward_v 2s
+}
+#prev_s.vert.anim {
+    -webkit-animation: backward_v 2s;
+    animation: backward_v 2s
+}
+@keyframes forward_h {
+    0% {opacity: 0; transform: translateX(0)}
+    25% {opacity: 1; transform: translateX(15px)}
+    100% {transform: translateX(0)}
+}
+@keyframes backward_h {
+    0% {opacity: 0; transform: translateX(0)}
+    25% {opacity: 1; transform: translateX(-15px)}
+    100% {transform: translateX(0)}
+}
+@keyframes forward_v {
+    0% {opacity: 0; transform: translateY(0) rotate(0)}
+    25% {opacity: 1; transform: translateY(15px) rotate(90deg)}
+    100% {transform: translateY(0) rotate(90deg)}
+}
+@keyframes backward_v {
+    0% {opacity: 0; transform: translateY(0) rotate(90deg)}
+    25% {opacity: 1; transform: translateY(-15px) rotate(0)}
+    100% {transform: translateY(0) rotate(0)}
+}
 
 .navbar {
     position: fixed;
     top: 10px;
-    right: 20px;
+    right: 10px;
     width: fit-content;
     z-index: 3;
 }
@@ -58,13 +107,13 @@
     padding: 5px;
     text-align: center
 }
-.navbar .btn-3:not(:first-of-type), 
+.navbar .nav-item:not(:first-of-type), 
 .navbar #btn-menu-collapse,
-.navbar.opened .btn-3:first-of-type {
+.navbar.opened .nav-item:first-of-type {
     display: none
 }
-.navbar .btn-3:first-of-type, 
-.navbar.opened .btn-3:not(:first-of-type), 
+.navbar .nav-item:first-of-type, 
+.navbar.opened .nav-item:not(:first-of-type), 
 .navbar.opened #btn-menu-collapse {
     display: list-item
 }
@@ -90,20 +139,20 @@
     to {opacity: 0}
 }
 .navbar ul li:nth-child(1) {
-    padding: 12px 5px;
-    transform: translateX(-7px) rotate(1deg);
+    padding: 5px;
+    transform: translateX(-7px) rotate(0);
 }
 .navbar.opened ul li:nth-child(2) {
-    transform: translateX(-5px) rotate(2deg);
+    transform: translateX(-8px) rotate(3deg);
 }
 .navbar.opened ul li:nth-child(3) {
-    transform: translateX(-3px) rotate(4deg);
+    transform: translateX(-10px) rotate(5deg);
 }
 .navbar.opened ul li:nth-child(4) {
-    transform: translateX(-7px) rotate(8deg);
+    transform: translateX(-13px) rotate(7deg);
 }
 .navbar.opened ul li:nth-child(5) {
-    transform: translateX(-15px) rotate(14deg);
+    transform: translateX(-18px) rotate(12deg);
 }
 .navbar ul li, .g_block .caption {
     margin: 2px 0;
@@ -126,8 +175,8 @@
 .navbar .nav-item.active a {
     color: #fff
 }
-.navbar .btn-3::before, .navbar .btn-3::after {
-  content:"";
+.navbar .nav-btn::before, .navbar .nav-btn::after {
+  content: '';
   width: 0;
   height: 2px;
   position: absolute;
@@ -139,41 +188,41 @@
   background: -o-linear-gradient(bottom, #fff, rgba(255,255,255,0));
   background: -moz-linear-gradient(bottom, #fff, rgba(255,255,255,0))*/
 }
-.navbar .btn-3 a::before, .navbar .btn-3 a::after {
-  content:"";
+.navbar .nav-btn a::before, .navbar .nav-btn a::after {
+  content: '';
   width: 0;
   height: 2px;
   position: absolute;
   transition: all 0.2s linear;
   background: url(../img/border_nav.png) no-repeat;
 }
-.navbar .btn-3:hover::after {
+.navbar .nav-btn:hover::after {
   width: 100%
 }
-.navbar .btn-3:hover a::after {
+.navbar .nav-btn:hover a::after {
   height: 100%
 }
-.btn-3::after {
+.nav-btn::after {
   left: 0;
   bottom: 0;
   transition-delay: 0.6s;
 }
-.btn-3 a::after {
+.nav-btn a::after {
   transition-delay: 0.4s;
   right: 0;
   bottom: 0
 }
 
-.btn-3:hover::after {
+.nav-btn:hover::after {
   transition-delay: 0s;
 }
-.btn-3:hover a::after{
+.nav-btn:hover a::after{
   transition-delay: 0.2s;
 }
-.btn-3:hover::before{
+.nav-btn:hover::before{
   transition-delay: 0.4s;
 }
-.btn-3:hover a::before{
+.nav-btn:hover a::before{
   transition-delay: 0.6s;
 }
 
@@ -181,9 +230,6 @@
 @media screen and (max-width: 1024px) {
     .navbar a {
         font-size: 17px
-    }
-    .navbar ul li {
-        /*padding: 10px*/
     }
     #btn-menu-collapse {
         margin: 1.6rem 1.6rem 1.6rem 0 !important;
@@ -237,11 +283,11 @@
     .navbar ul li {
         padding: 3px
     }
-    #next_section {
-        right: 10px
+    #next_s {
+        right: 15px
     }
-    #prev_section {
-        left: 10px
+    #prev_s {
+        left: 15px
     }
     .navbar-bottom img {
         width: 50px
