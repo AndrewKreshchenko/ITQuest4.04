@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lviv IT Quest 4.04 (2019)</title>
+    <link rel="icon" type="image/png" href="img/fav404.ico" sizes="32x32">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" media="all" href="css/space.css"/>
+</head>
+<body>
+    <div class="bg-out">
+        <div class="comet"><img src="img/comet.png" alt="comet"></div>
+        <img id="not-found-msg" src="img/page_not_found.png" alt="pageNotFound">
+    </div>
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script src="dist/scrollreveal.js"></script>
+    <script>
+        window.sr = ScrollReveal({
+            duration: 800
+        });
+        sr.reveal('#not-found-msg', {
+            delay: 200,
+        });
+    </script>
+</body>
+</html>
