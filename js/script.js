@@ -242,6 +242,10 @@ $('#g-list-groups').on('click', function() {
 $(function() {
     var showcase = $("#carousel"), title = $('#item-title');
 
+    /* Collapsing navbar for mobiles */
+    if ($(window).outerWidth() < 400)
+	$('.navbar').removeClass('opened');
+	
     /* Header animations */
     headerActions();
 
