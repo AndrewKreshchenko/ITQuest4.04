@@ -378,12 +378,12 @@ h1.section-header-txt .hidden-link:visited {
     to {transform: rotate(-360deg)}
 }
         @keyframes d_moving {
-            from {transform: translate(0, 0)}
-            to {transform: translate(250px, 90px)}
+            from {transform: translate(-90px, -150px)}
+            to {transform: translate(0, 0)}
         }
         @-webkit-keyframes d_moving {
-            from {-webkit-transform: translate(0, 0)}
-            to {-webkit-transform: translate(250px, 90px)}
+            from {transform: translate(-90px, -150px)}
+            to {transform: translate(0, 0)}
         }
 .header-title-txt {
     margin-top: 30px
