@@ -261,6 +261,9 @@ h1.section-header-txt .hidden-link:visited {
 #section_4 p {
     margin-bottom: 5px
 }
+.logo-organizer {
+    margin-bottom: 25px
+}
 .social {
     width: 50%;
     text-align: center
