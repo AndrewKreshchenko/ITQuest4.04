@@ -340,11 +340,11 @@ h1.section-header-txt .hidden-link:visited {
     /*animation-timing-function: cubic-bezier(.65,0,.32,1.55);*/
 }
 #robotdebris.anim {
-    -moz-animation: dmove 1s;
-    -ms-animation: dmove 1s;
-    -o-animation: dmove 1s;
-    -webkit-animation: dmove 1s;
-    animation: dmove 1s;
+    -moz-animation: d_moving 4s;
+    -ms-animation: d_moving 4s;
+    -o-animation: d_moving 4s;
+    -webkit-animation: d_moving 4s;
+    animation: d_moving 4s;
 }
 /*.letter-q.anim img {
     -moz-animation: q_appear 4s;
@@ -377,10 +377,14 @@ h1.section-header-txt .hidden-link:visited {
     from {transform: rotate(0deg)}
     to {transform: rotate(-360deg)}
 }
-@keyframes dmove {
-    from {transform: translate(0,0)}
-    to {transform: translate(100px,300px)}
-}
+        @keyframes d_moving {
+            from {transform: translate(0, 0)}
+            to {transform: translate(250px, 90px)}
+        }
+        @-webkit-keyframes d_moving {
+            from {-webkit-transform: translate(0, 0)}
+            to {-webkit-transform: translate(250px, 90px)}
+        }
 .header-title-txt {
     margin-top: 30px
 }
