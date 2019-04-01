@@ -73,6 +73,9 @@
         margin: 30px auto;
         max-width: 66.67%
     }
+    .logo-organizer {
+        margin-bottom: 15px
+    }
 }
 @media screen and (max-width: 1024px) and (orientation: portrait) {
     #section_3.section .section-content-bg {
@@ -198,6 +201,9 @@
     }
     #section_4 .section-content-bg > div {
         max-width: 75%;
+    }
+    .logo-organizer {
+        margin-bottom: 5px
     }
 }
 @media screen and (max-width: 550px) {
