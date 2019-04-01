@@ -32,7 +32,6 @@ var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
 
 /* Navigation */
 var ind_ = 1;//erase later
-autoCollapseMenu();
 function autoCollapseMenu() {
     if ($(window).outerWidth() < 550) {
         setTimeout(function () {
