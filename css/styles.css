@@ -184,7 +184,7 @@ h1.section-header-txt .hidden-link:after,
 h1.section-header-txt .hidden-link:visited {
     color: #f91f1f !important;
     font-weight: 400;
-    cursor: auto
+    cursor: none
 }
 .d-none { /* Bootstrap 4 style */
     display: none
