@@ -7,21 +7,56 @@
     <title>Lviv IT Quest 4.04 (2019)</title>
     <link rel="icon" type="image/png" href="img/fav404.ico" sizes="32x32">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" media="all" href="css/space.css"/>
+    <link rel="stylesheet" media="all" href="css/space.css">
+    <link rel="stylesheet" media="all" href="css/styles.css">
+    <link rel="stylesheet" media="all" href="css/responsive.css">
 </head>
 <body>
-    <div class="bg-out">
-        <div class="comet"><img src="img/comet.png" alt="comet"></div>
-        <img id="not-found-msg" src="img/page_not_found.png" alt="pageNotFound">
+    <div id="page" class="parallax">
+        <div class="parallax__group">
+            <div class="parallax__layer parallax__layer--base ">
+                <div id="section_1" class="section bg-out">
+                    <div class="comet"><img src="img/comet.png" alt="comet"></div>
+                    <img id="not-found-msg" src="img/page_not_found.png" alt="pageNotFound">
+                </div>
+                <div id="section_2" class="section bg-out">
+                    <img src="img/url_key.png" alt="URLKey">
+                </div>
+            </div>
+            <div class="parallax__layer parallax__layer--deep">
+            </div>
+        </div>
     </div>
+
+    <!-- Include jQuery lib -->
     <script type="text/javascript" src="libs/jquery.min.js"></script>
+
+    <!-- Include libs for scroll performance -->
     <script src="dist/scrollreveal.js"></script>
+    <script type="text/javascript" src="libs/jquery.scrollTo.js" charset="utf-8"></script>
     <script>
+        /*function scrollRevealFirst() {
+            sr.reveal('#not-found-msg', {delay: 200,});
+        }*/
+
         window.sr = ScrollReveal({
             duration: 800
         });
-        sr.reveal('#not-found-msg', {
-            delay: 200,
+
+        $(function() {
+            //$('#page').scrollTo($('#section_1'), 0);
+            /*$('#page').scrollTo('#section_1', 100, {
+                onAfter : function() {scrollRevealFirst();}
+            });*/
+            sr.reveal('#not-found-msg', {
+                delay: 200,
+            });
+            $('#section_1 img').on('click', function() {
+                $('#page').scrollTo($('#section_2'), 1200);
+            });
+            $('#section_2 img').on('click', function() {
+                $('#page').scrollTo($('#section_1'), 1200);
+            });
         });
     </script>
 </body>
