@@ -330,9 +330,17 @@ h1.section-header-txt .hidden-link:visited {
     animation: sparks 1s;
     /*animation-timing-function: cubic-bezier(.65,0,.32,1.55);*/
 }
+#robotdebris2, #robotdebris3 {
+    position: absolute
+}
 #robotdebris2 {
-    position: absolute;
     left: 0
+}
+#robotdebris3 {
+    width: 220px;
+    top: 250px;
+    left: 125px;
+    z-index: -1;
 }
 #robotdebris.anim {
     -moz-animation: d_moving_r 8s ease;
@@ -348,22 +356,13 @@ h1.section-header-txt .hidden-link:visited {
     -webkit-animation: d_moving_l 4s ease;
     animation: d_moving_l 4s ease;
 }
-/*.letter-q.anim img {
-    -moz-animation: q_appear 4s;
-    -ms-animation: q_appear 4s;
-    -o-animation: q_appear 4s;
-    -webkit-animation: q_appear 4s;
-    animation: q_appear 4s;
-}*/
-/*.block-intro-title.anim #letter-q-circle {
-    -moz-animation: gear_r 8s infinite;
-    -ms-animation: gear_r 8s infinite;
-    -o-animation: gear_r 8s infinite;
-    -webkit-animation: gear_r 8s infinite;
-    animation: gear_r 8s;
-    -ms-transform-origin: 50% 50%;
-    -webkit-transform-origin: 50% 50%;
-}*/
+#robotdebris3.anim {
+    -moz-animation: d_moving_tl 2s ease;
+    -ms-animation: d_moving_tl 2s ease;
+    -o-animation: d_moving_tl 2s ease;
+    -webkit-animation: d_moving_tl 2s ease;
+    animation: d_moving_tl 2s ease;
+}
 @keyframes sparks {
     0%, 25% {opacity: 0}
     25% {opacity: .5}
