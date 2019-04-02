@@ -192,6 +192,9 @@ h1.section-header-txt .hidden-link:visited {
     background: linear-gradient(to bottom right, #fff, rgba(255,255,255,.3));*/
     background: linear-gradient(to bottom right, #5c2323, rgba(0,0,0,0.7));
 }
+#section_3 .section-header-txt {
+    color: rgba(255,255,255,0.85)
+}
 #section_3.section .section-content-bg {/*#section_2*/
     top: -23vh;
     left: -25%;
