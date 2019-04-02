@@ -1,18 +1,5 @@
-/*jQuery.fn.hasScrollBar = function(direction) {
-    if (direction == 'vertical') {
-        return this.get(0).scrollHeight > this.innerHeight();
-        console.log('vertical');
-    }
-    else if (direction == 'horizontal') {
-        return this.get(0).scrollWidth > this.innerWidth();
-        console.log('horizontal');
-    }
-    return false;
-}*/
-
 function readyGallery() {
     /* baguetteBox.js slider init */
-    //baguetteBox.run('#gallery');
     baguetteBox.run('#gallery', {
         //buttons: true,
         captions: function(element) {
@@ -20,35 +7,26 @@ function readyGallery() {
         }
     });
 }
-
-/* Scroll */
-var ua = navigator.userAgent.toLowerCase();
-var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-/*if (isAndroid || ($(window).width() <= 768)) {//window.location = 'http://android.davidwalsh.name';
-    window.location.href = "indexmob.html";
-    //$('#main_s').removeClass('front scroll');
-   // $("#mob").append('<pre style="background-color: transparent"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></pre>');
-}*/
+function revealing() {
+    window.sr = ScrollReveal({
+        duration: 800
+    });
+    sr.reveal('#gallery', {
+        duration: 400
+    });
+}
 
 /* Navigation */
 var ind_ = 1;//erase later
 function autoCollapseMenu() {
-    if ($(window).outerWidth() < 550) {
-        setTimeout(function () {
-            $('.navbar').removeClass('opened') 
-        }, 
-        5000);
-    }
+    if ($(window).outerWidth() > 449)
+        return;
+    
+    setTimeout(function() {$('.navbar').removeClass('opened')}, 5000);
 }
-function directBtnNav(i, b) {
-    if (b === true && i > 2) {
-        $('#next_s').addClass('down');
-    }
-
-    if ($('#next_s')) {
-
-    }
-}
+/*function directBtnNav(i, b) {
+    if (b === true && i > 2) {$('#next_s').addClass('down');}
+}*/
 function to_section(i, b) {
     $('.navbar .nav-item.active').removeClass('active');
     if (!$('.navbar .nav-item').eq(i-1).hasClass('active')) {
@@ -79,9 +57,6 @@ function to_section(i, b) {
             $('#next_s').addClass('end');
         }
 
-        //if (typeof b !== 'undefined')
-            //directBtnNav(i, b);
-
         if (i == 4 && ind_ == 3) {
             let wh = $(window).height();
             //b ? $('#next_s').addClass('down') : '';
@@ -100,6 +75,12 @@ function to_section(i, b) {
         else {
             $('#main').scrollTo({top:offset.top+'px', left:offset.left+'px'}, 1200);
         }
+
+        /*if (i == 3) {
+            $('#main').scrollTo({top:offset.top+'px', left:offset.left+'px'}, 1200, {
+                onAfter : function() {revealing()}
+            });
+        }*/
     }
     ind_ = i;
 }
@@ -126,43 +107,6 @@ function headerActions() {
     }
 }
 
-function section(i, depth) {
-    // lang
-    //detectLang();
-
-    if(!scr) {
-        // check scroll working
-        scr = true;
-
-        // scroll
-		/*if (i === 1) {
-			$('#main').scrollTo({top:'0', left:'290px'}, 800);
-			$('#main').scrollTo($('#main'), 1000, { offset:{ top:'-=100px'} });
-			scr = false;
-			return;
-		}*/
-        if (depth !== depth_) {
-            if (depth > depth_) {
-                //$('#main').scrollTo('#section_'+i, 1000, { offset:{ top:'+='+100*(depth-depth_)+'px'} });
-            }
-            else {
-                //$('#main').scrollTo('#section_'+i, 1000, { offset:{ top:'-='+100*(depth-depth_)+'px'} });
-            }
-            depth_ = depth;
-        }
-        else {
-            $('#main').scrollTo('#section_'+i, 1000);
-        }
-
-        /*$('#main').scrollTo('#section_'+i, {
-            duration:1000,
-            axis: 'x',
-            onAfter: function(){
-                scr = false
-            }
-        });*/
-    }
-}
 function to_invitation() {
     var h = $(window).outerHeight();
     console.log(h);
@@ -203,7 +147,7 @@ $('#btn-menu-collapse').on('click', function() {
 $('#btn-menu-open').on('click', function() {
     var $li = $('.navbar [data-nav]');
     $('.navbar').addClass('opened');
-    //autoCollapseMenu();
+    autoCollapseMenu();
     /*$li.each(function(i, el) {
         console.log(el);
        $(el).animate({'transform': 'translateX(-5px)', 'transform': 'rotate(2deg)'}, 1000); 
@@ -239,8 +183,6 @@ $('#g-list-groups').on('click', function() {
 });
 
 $(function() {
-    var showcase = $("#carousel"), title = $('#item-title');
-
     /* Collapsing navbar for mobiles */
     if ($(window).outerWidth() < 400)
 	$('.navbar').removeClass('opened');
@@ -258,41 +200,12 @@ $(function() {
         delay: 200,
         duration: 1500
     });
-    /*if ($('#robot-sparks-decor').length) {
-        $('#robot-sparks-decor').addClass('anim');
-    }*/
-
     /* Gallery ready */
     readyGallery();
 
     var safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     if (safari)
         $('#btn-menu-open').removeClass('nav-btn');
-      /*showcase.Cloud9Carousel( {
-        xRadius: 800,
-        mirror: {
-          gap: 12,
-          height: 2,
-          width: 500
-        },
-        buttonLeft: $("#buttons > .left"),
-        buttonRight: $("#buttons > .right"),
-        autoPlay: 0,
-        bringToFront: true,
-        onLoaded: function() {
-          showcase.css( 'visibility', 'visible' )
-          showcase.css( 'display', 'none' )
-          showcase.fadeIn( 1000 )
-        }
-      });*/
-
-      function rendered( carousel ) {
-        title.text( carousel.nearestItem().element.alt )
-
-        // Fade in based on proximity of the item
-        var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
-        title.css('opacity', 0.5 + (0.5 * c))
-      }
 
       // Simulate physical button click effect
       var header = $('header'), btn = $('button.toggle-nav');
@@ -303,53 +216,5 @@ $(function() {
       $('#nav > button').click( function( e ) {
         var b = $(e.target).addClass( 'down' )
         setTimeout( function() { b.removeClass( 'down' ) }, 80 )
-      } )
-
-      $(document).keydown( function( e ) {
-        // More codes: http://www.javascripter.net/faq/keycodes.htm
-        switch( e.keyCode ) {
-          /* left arrow */
-          case 37:
-            $('#nav > .left').click()
-            break
-
-          /* right arrow */
-          case 39:
-            $('#nav > .right').click()
-        }
       });
 });
-function normilize() {
-    var gals = $(".tz-gallery").length;//divs = $('[class*="col-"], [class^="col-"]');
-    var tmp = 1, l2 = 1;
-    for (var i = 0; i < gals; i++) {
-        let gk = $('.tz-gallery').eq(i).children('[class*="col-"]').length;
-        if (gk > 4) {
-            for (var j = gk; j > 3; j--) {
-                let g = $('.tz-gallery').eq(i).children('[class*="col-"]').find("img").eq(j);
-                g.css('width', '0');
-            }
-        }
-    }
-}
-var magnifPopup = function() {
-	$('.image-popup').magnificPopup({
-		type: 'image',
-		removalDelay: 300,
-		mainClass: 'mfp-with-zoom',
-		titleSrc: 'title',
-		gallery:{
-			enabled:true
-		},
-		zoom: {
-			enabled: true, // By default it's false, so don't forget to enable it
-			duration: 300, // duration of the effect, in milliseconds
-			easing: 'ease-in-out', // CSS transition easing function
-			// The "opener" function should return the element from which popup will be zoomed in and to which popup will be scaled down. By default it looks for an image tag:
-			opener: function(openerElement) {
-			// openerElement is the element on which popup was initialized, in this case its <a> tag you don't need to add "opener" option if this code matches your needs, it's defailt one.
-			return openerElement.is('img') ? openerElement : openerElement.find('img');
-			}
-		}
-	});
-};
