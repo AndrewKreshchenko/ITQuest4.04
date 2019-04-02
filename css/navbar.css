@@ -17,6 +17,9 @@
 #btn-menu-collapse img {
     max-width: 20px
 }
+#btn-menu-open a:hover, #btn-menu-open a:active, #btn-menu-open a:after {
+    color: #00b8cc !important
+}
 
 .navbar-bottom > img {
     position: fixed;
