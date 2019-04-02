@@ -339,12 +339,23 @@ h1.section-header-txt .hidden-link:visited {
     animation: sparks 1s;
     /*animation-timing-function: cubic-bezier(.65,0,.32,1.55);*/
 }
+#robotdebris2 {
+    position: absolute;
+    left: 0
+}
 #robotdebris.anim {
-    -moz-animation: d_moving 4s ease;
-    -ms-animation: d_moving 4s ease;
-    -o-animation: d_moving 4s ease;
-    -webkit-animation: d_moving 4s ease;
-    animation: d_moving 4s ease;
+    -moz-animation: d_moving_r 8s ease;
+    -ms-animation: d_moving_r 8s ease;
+    -o-animation: d_moving_r 8s ease;
+    -webkit-animation: d_moving_r 8s ease;
+    animation: d_moving_r 8s ease;
+}
+#robotdebris2.anim {
+    -moz-animation: d_moving_l 4s ease;
+    -ms-animation: d_moving_l 4s ease;
+    -o-animation: d_moving_l 4s ease;
+    -webkit-animation: d_moving_l 4s ease;
+    animation: d_moving_l 4s ease;
 }
 /*.letter-q.anim img {
     -moz-animation: q_appear 4s;
@@ -377,14 +388,18 @@ h1.section-header-txt .hidden-link:visited {
     from {transform: rotate(0deg)}
     to {transform: rotate(-360deg)}
 }
-        @keyframes d_moving {
-            from {transform: translate(-30px, -70px)}
-            to {transform: translate(0, 0)}
-        }
-        @-webkit-keyframes d_moving {
-            from {transform: translate(-30px, -70px)}
-            to {transform: translate(0, 0)}
-        }
+@keyframes d_moving_r {
+    from {transform: translate(-70px, -20px)}
+    to {transform: translate(0, 0)}
+}
+@-webkit-keyframes d_moving_r {
+    from {transform: translate(-70px, -20px)}
+    to {transform: translate(0, 0)}
+}
+@keyframes d_moving_l {
+    from {transform: translate(-15px, -5px)}
+    to {transform: translate(0, 0)}
+}
 .header-title-txt {
     margin-top: 30px
 }
@@ -402,9 +417,9 @@ h1.section-header-txt .hidden-link:visited {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
 }
-.list-companies > li > label {
+/*.list-companies > li > label {
     font-size: 22px
-}
+}*/
 #gallery {
     float: right
 }
@@ -478,12 +493,16 @@ h1.section-header-txt .hidden-link:visited {
     background-color: transparent !important;
     font-family: 'Roboto Condensed', sans-serif !important;
     text-shadow: 5px 5px 10px #000;
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 300
 }
 #previous-button, #next-button {
     display: block !important
 }
+#previous-button svg, #next-button svg {
+    transform-origin: 50% 50%;
+    transform: scale(.6)
+} 
 .tz-gallery .caption {
     padding: 26px 30px;
     text-align: center;
@@ -494,6 +513,47 @@ h1.section-header-txt .hidden-link:visited {
 }
 .baguetteBox-button {
     background-color: transparent !important;
+}
+
+/* 404 Error page */
+.bg-out {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#section_1.bg-out img {
+    max-width: 50%
+}
+#section_2.bg-out img {
+    max-width: 75%
+}
+#section_1.bg-out .comet {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+#section_1.bg-out .comet img {
+    position: absolute;
+    height: 20px;
+    top: 100px;
+    left: -200px;
+    -webkit-animation: comet_ 2s;
+    animation: comet_ 2s;
+}
+@keyframes comet_ {
+    0%, 50% {opacity: 0; transform: translate(0, 0)}
+    50% {opacity: 1; transform: translate(0, 0)}
+    100% {opacity: 1; transform: translate(400vw, 300px)}
+}
+@media screen and (max-width: 767px) {
+    #section_1.bg-out img {
+        max-width: 66.6%
+    }
+    #section_2.bg-out img {
+        max-width: 90%
+    }
 }
 
 /*.spec_items {
