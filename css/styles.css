@@ -3,6 +3,18 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,600,700,800,900&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|PT+Sans:400,700|Roboto+Condensed:300,400,700&subset=cyrillic,cyrillic-ext');
+/*@font-face {
+    font-family: 'Myriad Pro Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Myriad_Pro_Light'), url('fonts/Myriad_Pro_Light.otf') format('otf');
+}
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Myriad Pro Regular'), url('fonts/Myriad_Pro_Regular.ttf') format('ttf');
+}*/
 
 body {
     font: normal 16px sans-serif;
@@ -390,6 +402,10 @@ h1.section-header-txt .hidden-link:visited {
     from {transform: translate(-15px, -5px)}
     to {transform: translate(0, 0)}
 }
+@keyframes d_moving_tl {
+    from {transform: translate(-20px, 8px)}
+    to {transform: translate(0, 0)}
+}
 .header-title-txt {
     margin-top: 30px
 }
@@ -491,7 +507,7 @@ h1.section-header-txt .hidden-link:visited {
 }
 #previous-button svg, #next-button svg {
     transform-origin: 50% 50%;
-    transform: scale(.75)
+    transform: scale(.6)
 } 
 .tz-gallery .caption {
     padding: 26px 30px;
