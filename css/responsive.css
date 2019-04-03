@@ -25,9 +25,6 @@
         margin-left: 50px;
         margin-right: 50px;
     }
-    /*.section .section-content {
-        width: 75vw; 
-    }*/
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     /*.tz-gallery .thumbnail .fit-content {
@@ -297,7 +294,7 @@
         padding-top: 140px
     }
     .container-space {
-        width: 260vw
+        width: 280vw
     }
     .header-title-txt {
         margin-top: 15px
@@ -325,7 +322,7 @@
         width: 80px
     }
     #section_2.section .section-content-bg {
-        right: 60vw;
+        right: 33vw;
         width: 110vw;
         height: 110vw
     }
@@ -350,7 +347,15 @@
 }
 @media screen and (max-width: 380px) {
     #section_2.section .section-content-bg {
-        right: 53vw
+        right: 68vw
+    }
+    #section_4 .section-content-bg > div {
+        margin: 50px auto
+    }
+}
+@media screen and (max-width: 350px) {
+    #section_2.section .section-content-bg {
+        right: 75vw
     }
 }
 @media screen and (max-width: 400px) and (max-height: 600px) {
