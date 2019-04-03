@@ -95,13 +95,6 @@
     width: fit-content;
     z-index: 3;
 }
-.navbar a {
-    /*font-family: 'PT Sans', sans-serif;
-    font-family: 'Open Sans Condensed', sans-serif;*/
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-}
 .navbar ul {
     padding-inline-start: 40px;
     max-width: 170px;
@@ -119,6 +112,11 @@
 .navbar.opened .nav-item:not(:first-of-type), 
 .navbar.opened #btn-menu-collapse {
     display: list-item
+}
+.navbar ul li a {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
 }
 .navbar .nav-item, .navbar .nav-item {
     opacity: 0;
@@ -280,11 +278,24 @@
     }
 }
 @media screen and (max-width: 550px) {
-    .navbar a {
-        font-size: 15px
+    .navbar ul {
+        padding-inline-end: 60px
     }
     .navbar ul li {
-        padding: 3px
+        padding: 0;
+        min-width: 70px
+    }
+    .navbar ul li a {
+        font-size: 12px
+    }
+    .navbar ul [data-nav="1"] {
+        padding-left: 0 !important
+    }
+    #btn-menu-collapse {
+        margin: 0 4.2rem 1.6rem 3rem !important
+    }
+    #btn-menu-collapse img {
+        max-width: 15px
     }
     #next_s {
         right: 15px
