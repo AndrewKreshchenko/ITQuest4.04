@@ -96,7 +96,7 @@
     z-index: 3;
 }
 .navbar ul {
-    padding-inline-start: 40px;
+    padding-inline-start: 0px;
     max-width: 170px;
 }
 .navbar ul li, .navbar ul li a, .g_block .caption {
