@@ -244,7 +244,7 @@
 }
 @media screen and (max-width: 767px) {
     .navbar {
-        left: -35px /* if browser not isChromiumBased - supposed to set -95px */
+        left: 10px /* if browser not isChromiumBased - supposed to set -95px */
     }
     .navbar ul li:nth-child(1) {
         transform: translateX(0) rotate(0);
