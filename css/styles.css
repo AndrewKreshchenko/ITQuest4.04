@@ -3,18 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,600,700,800,900&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|PT+Sans:400,700|Roboto+Condensed:300,400,700&subset=cyrillic,cyrillic-ext');
-/*@font-face {
-    font-family: 'Myriad Pro Light';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Myriad_Pro_Light'), url('fonts/Myriad_Pro_Light.otf') format('otf');
-}
-@font-face {
-    font-family: 'Myriad Pro Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Myriad Pro Regular'), url('fonts/Myriad_Pro_Regular.ttf') format('ttf');
-}*/
 
 body {
     font: normal 16px sans-serif;
@@ -254,18 +242,15 @@ h1.section-header-txt .hidden-link:visited {
     background-size: 100% auto !important;
 }
 #section_4 .section-content-bg > div {
-    margin: 90px auto;
-    max-width: 50%;
+    margin: 50px auto;
+    max-width: 66.6%;
 }
 #section_4 img {
     margin: 15px 0 20px;
-    max-width: 100px;
+    max-width: 85px;
 }
 #section_4 p {
     margin-bottom: 5px
-}
-.logo-organizer {
-    margin-bottom: 25px
 }
 .social {
     width: 50%;
@@ -278,9 +263,9 @@ h1.section-header-txt .hidden-link:visited {
 
 /* Intro section */
 .section.section-intro .block-actor-decor img {
-    margin-top: -20vh;/*-155px (75px + 30px + 50px)*/
-    padding-left: 15vw;
-    max-height: 80vh;
+    margin-top: -20vh;
+    padding-left: 20vw;
+    max-height: 75vh
 }
 .block-intro-text {
     margin-top: 10vh
