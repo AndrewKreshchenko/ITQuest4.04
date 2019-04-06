@@ -40,9 +40,88 @@
     background: url(../img/wallpaper-wiki.jpg) no-repeat
 }
 .parallax__layer--deep {
+    /*height: 100%;
+    width: 100%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='5');*/
     background-size: cover;
     background-position-y: 80%;
     -webkit-transform: translateZ(-3000px) scale(15);
     transform: translateZ(-3000px) scale(15);
     z-index: -4;
+}
+
+/* centre the content in the parallax layers */
+.title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+/*#main .parallax__layer--deep {
+    background: rgba(184,223,101,.3);
+}*/
+
+/* Important: keep position fixed, you can however use top:0 instead of bottom:0. If you want to make it stick to the top of the browser. */
+.scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/* Z-index ordering of the different layers, do this for your layers, also assign absolute width (to prevent issues if the script gets executed before the images get loaded). */
+.horizon {
+    width: 1500px;
+    z-index: -2300;
+}
+.middle {
+    width: 2000px;
+    z-index: -2000;
+}
+.neighbour {
+    width: 200px;
+    z-index: -1775;
+}
+.front {
+    width: 5500px;
+    z-index: 1;
+}
+
+/* Additional */
+.intro {
+    position: absolute;
+    left: 500px;
+    top: 0px;
+    padding-right: 50px;
+    background: url('../images/scroll.png') no-repeat right 5px;
+}
+.page {
+    top: 0px;
+    width: 500px;
+    background: white;
+    padding: 10px 30px;
+    border: 1px #eee solid;
+    position: absolute;
+}
+.description {
+    left: 1500px;
+}
+.documentation {
+    left: 2450px;
+}
+.options {
+    width: 700px;
+    left: 3800px;
+}
+.download {
+    width: 500px;
+    left: 5100px;
+}
+.license {
+    padding: 100px 30px 30px 30px;
 }
