@@ -184,9 +184,12 @@ $('#g-list-groups').on('click', function() {
 
 $(function() {
     /* Collapsing navbar for mobiles */
-    if ($(window).outerWidth() < 400)
+    if ($(window).outerWidth() < 400) {
 	$('.navbar').removeClass('opened');
-	
+	let nav_offset = $('#btn-menu-open').offset().left;
+	if (nav_offset > 15)
+	    $('.navbar').css('left', ($('.navbar').offset().left-nav_offset+10)+'px');
+    }	
     /* Header animations */
     headerActions();
 
@@ -217,8 +220,4 @@ $(function() {
         var b = $(e.target).addClass( 'down' )
         setTimeout( function() { b.removeClass( 'down' ) }, 80 )
       });
-	
-	$('#section_4 h1').on('click', function() {
-		alert($('#btn-menu-open').offset().left);
-	})
 });
