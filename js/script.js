@@ -217,4 +217,8 @@ $(function() {
         var b = $(e.target).addClass( 'down' )
         setTimeout( function() { b.removeClass( 'down' ) }, 80 )
       });
+	
+	$('#section_4 h1').on('click', function() {
+		alert($('.navbar').offset().left);
+	})
 });
