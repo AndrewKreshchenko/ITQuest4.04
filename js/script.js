@@ -219,6 +219,6 @@ $(function() {
       });
 	
 	$('#section_4 h1').on('click', function() {
-		alert($('.navbar').offset().left);
+		alert($('#btn-menu-open').offset().left);
 	})
 });
